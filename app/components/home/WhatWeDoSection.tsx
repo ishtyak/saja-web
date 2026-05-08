@@ -1,0 +1,176 @@
+import Link from "next/link";
+
+const designFeatures = [
+  {
+    title: "Rich Question Types",
+    description: "Choice, rating, NPS, matrix, text, audio, and video - ask questions the way you need.",
+  },
+  {
+    title: "Advanced Survey Logic",
+    description: "Control survey flow with skip, display, piping, looping, and priority logic and more.",
+  },
+  {
+    title: "Smart Question Controls",
+    description: "Apply randomization, exclusive options, validation rules, mandatory conditions, scoring. Add images, audio or video.",
+  },
+  {
+    title: "Redirection Link",
+    description: "Redirect respondents to different pages based on their responses or ratings.",
+  },
+  {
+    title: "Multilingual Support",
+    description: "Run surveys in multiple languages to reach diverse audiences.",
+  },
+  {
+    title: "Custom Themes & Branding",
+    description: "Match your brand with custom colors, layouts, and visual styling.",
+  },
+];
+
+const collectFeatures = [
+  {
+    title: "Share via link, QR code, email, kiosk, or app",
+  },
+  {
+    title: "Personalized and unique survey links",
+  },
+  {
+    title: "Bulk email campaigns with customization",
+  },
+  {
+    title: "Save progress automatically until submission on app",
+  },
+  {
+    title: "Anonymous response options",
+  },
+];
+
+const analyseFeatures = [
+  {
+    title: "Real-time Dashboards",
+    description: "Monitor survey results as they come in with dynamic, customizable dashboards.",
+  },
+  {
+    title: "AI Sentiment Analysis",
+    description: "Automatically reads open-text feedback as Positive, Neutral, or Negative, saving hours of manual review.",
+  },
+  {
+    title: "External Dashboard",
+    description: "Share live survey data with stakeholders, clients, or team members, no Saja account required.",
+  },
+  {
+    title: "SPSS (SAV) File Viewer",
+    description: "View and validate your SPSS data directly within Saja – no need to switch tools.",
+  },
+  {
+    title: "Smart Data Filters",
+    description: "Use advanced filters to explore your data — by date, time, day, weekday, question, or collectors.",
+  },
+  {
+    title: "Email Alert",
+    description: "Receive immediate alerts for low scores or critical responses, enabling rapid intervention.",
+  },
+  {
+    title: "Data Export",
+    description: "Export data effortlessly in Excel, CSV, or SPSS for further analysis.",
+  },
+];
+
+function CheckIcon() {
+  return (
+    <svg className="w-5 h-5 text-[#0095da] flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+    </svg>
+  );
+}
+
+export default function WhatWeDoSection() {
+  return (
+    <section className="w-full bg-white">
+      {/* Design */}
+      <div className="max-w-[1440px] mx-auto px-8 lg:px-16 py-16">
+        <div className="flex flex-col lg:flex-row gap-12 items-start">
+          <div className="lg:w-[180px] flex-shrink-0">
+            <span className="inline-block bg-[#0095da] text-white text-[24px] font-bold px-6 py-2 rounded-md">
+              Design
+            </span>
+          </div>
+          <div className="flex-1">
+            <h2 className="text-[56px] font-bold text-black mb-6">Design surveys your way</h2>
+            <Link href="#" className="text-[22px] text-[#0095da] font-medium hover:underline mb-8 inline-block">
+              Start Designing →
+            </Link>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 mt-4">
+              {designFeatures.map((f) => (
+                <div key={f.title}>
+                  <p className="text-[20px] font-medium text-[#1a191e] mb-1">{f.title}</p>
+                  <p className="text-[16px] text-[#727b84]">{f.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-gray-100" />
+
+      {/* Collect */}
+      <div className="max-w-[1440px] mx-auto px-8 lg:px-16 py-16">
+        <div className="flex flex-col lg:flex-row gap-12 items-start">
+          <div className="lg:w-[180px] flex-shrink-0">
+            <span className="inline-block bg-[#0095da] text-white text-[24px] font-bold px-6 py-2 rounded-md">
+              Collect
+            </span>
+          </div>
+          <div className="flex-1">
+            <h2 className="text-[50px] font-bold text-black mb-4">Collect Data from Users, easily</h2>
+            <p className="text-[24px] text-[#494949] mb-6">
+              Reach respondents where they are. Share surveys through flexible channels while keeping responses secure and organized.
+            </p>
+            <Link href="#" className="text-[22px] text-[#0095da] font-medium hover:underline mb-8 inline-block">
+              Collect →
+            </Link>
+            <ul className="flex flex-col gap-3 mt-4">
+              {collectFeatures.map((f) => (
+                <li key={f.title} className="flex items-start gap-3">
+                  <CheckIcon />
+                  <span className="text-[20px] text-[#494949]">{f.title}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-gray-100" />
+
+      {/* Analyse */}
+      <div className="max-w-[1440px] mx-auto px-8 lg:px-16 py-16">
+        <div className="flex flex-col lg:flex-row gap-12 items-start">
+          <div className="lg:w-[180px] flex-shrink-0">
+            <span className="inline-block bg-[#0095da] text-white text-[24px] font-bold px-6 py-2 rounded-md">
+              Analyse
+            </span>
+          </div>
+          <div className="flex-1">
+            <h2 className="text-[50px] font-bold text-black mb-4">Understand Feedback Instantly</h2>
+            <p className="text-[24px] text-[#494949] mb-6">
+              Visual dashboards update in real time, helping you spot trends, issues, and opportunities as feedback comes in.
+            </p>
+            <Link href="#" className="text-[22px] text-[#0095da] font-medium hover:underline mb-8 inline-block">
+              Begin Analyzing →
+            </Link>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 mt-4">
+              {analyseFeatures.map((f) => (
+                <div key={f.title}>
+                  <p className="text-[20px] font-medium text-[#1a191e] mb-1">{f.title}</p>
+                  <p className="text-[16px] text-[#727b84]">{f.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
