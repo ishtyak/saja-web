@@ -39,9 +39,8 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-[20px] font-medium transition-colors ${
-                  isActive ? "text-[#0095da]" : "text-[#494949] hover:text-[#0095da]"
-                }`}
+                className={`text-[16px] font-medium transition-colors ${isActive ? "text-[#0095da]" : "text-[#494949] hover:text-[#0095da]"
+                  }`}
               >
                 {link.label}
               </Link>
@@ -51,7 +50,7 @@ export default function Navbar() {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4">
-          <button className="flex items-center gap-2 text-[#494949] text-[20px] font-medium hover:text-[#0095da] transition-colors">
+          <button className="flex items-center gap-2 text-[#494949] text-[16px] font-medium hover:text-[#0095da] transition-colors">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="12" cy="12" r="10" />
               <line x1="2" y1="12" x2="22" y2="12" />
@@ -60,18 +59,15 @@ export default function Navbar() {
             Support
           </button>
           <Link
-            href="/login"
-            className="text-[20px] font-semibold text-[#494949] border border-gray-300 rounded-full px-6 py-2 hover:border-[#0095da] hover:text-[#0095da] transition-colors"
+            href="https://insights.saja.biz/login"
+            className="text-[16px] font-semibold text-[#494949] border border-gray-300 rounded-full px-6 py-2 hover:border-[#0095da] hover:text-[#0095da] transition-colors"
           >
             Login
           </Link>
-          <Link href="/get-started" className="relative inline-flex items-center">
-            {/* Yellow circle sits BEHIND the blue pill */}
-            <span className="absolute right-0 translate-x-[40%] w-[48px] h-[48px] rounded-full bg-[#f5a623] z-0 pointer-events-none" />
-            {/* Blue pill on top */}
-            <span className="relative z-10 bg-[#0095da] text-white text-[20px] font-semibold rounded-full pl-6 pr-10 py-[10px] block hover:bg-[#007ab8] transition-colors">
+          <Link href="https://insights.saja.biz/login" className="relative inline-flex items-center">
+            <button className="btn-primary text-[16px]">
               Get Started
-            </span>
+            </button>
           </Link>
         </div>
 
@@ -102,19 +98,18 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-lg font-medium py-2 ${
-                pathname === link.href ? "text-[#0095da]" : "text-[#494949]"
-              }`}
+              className={`text-lg font-medium py-2 ${pathname === link.href ? "text-[#0095da]" : "text-[#494949]"
+                }`}
               onClick={() => setMobileOpen(false)}
             >
               {link.label}
             </Link>
           ))}
           <div className="flex flex-col gap-3 pt-2 border-t border-gray-100">
-            <Link href="/login" className="btn-outline text-center">
+            <Link href="https://insights.saja.biz/login" target="_blank" className="btn-outline text-center">
               Login
             </Link>
-            <Link href="/get-started" className="btn-primary justify-center text-center">
+            <Link href="https://insights.saja.biz/login" target="_blank" className="btn-primary justify-center text-center">
               Get Started
             </Link>
           </div>

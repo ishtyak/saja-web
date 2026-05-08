@@ -38,10 +38,10 @@ export default function SajaAppSection() {
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           {/* Text content */}
           <div className="flex-1">
-            <h2 className="text-[50px] font-bold text-[#0095da] mb-4">
+            <h2 className="text-[44px] font-bold text-[#0095da] mb-4">
               Saja App for Offline Data Collection
             </h2>
-            <p className="text-[24px] text-[#494949] mb-10">
+            <p className="text-[20px] text-[#494949] mb-10">
               Empower your teams to capture real-world feedback anywhere.
             </p>
             <ul className="flex flex-col gap-5 mb-10">
@@ -49,7 +49,7 @@ export default function SajaAppSection() {
                 <li key={f.title} className="flex gap-4">
                   <CheckIcon />
                   <div>
-                    <p className="text-[20px] font-medium text-[#1a191e]">{f.title}</p>
+                    <p className="text-[16px] font-medium text-[#1a191e]">{f.title}</p>
                     <p className="text-[16px] text-[#727b84]">{f.description}</p>
                   </div>
                 </li>

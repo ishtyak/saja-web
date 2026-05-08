@@ -2,10 +2,10 @@ export default function TeamsSection() {
   return (
     <section className="w-full bg-white py-20">
       <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
-        <h2 className="text-[56px] font-bold text-[#0095da] mb-4">
+        <h2 className="text-[44px] font-bold text-[#0095da] mb-4">
           Built for Teams, Not Just Individuals
         </h2>
-        <p className="text-[24px] text-[#494949] mb-16 max-w-3xl">
+        <p className="text-[20px] text-[#494949] mb-16 max-w-3xl">
           Whether your team is designing surveys together or collecting responses on the ground, Saja adapts to how you work.
         </p>
 
@@ -13,7 +13,7 @@ export default function TeamsSection() {
           {/* Collaborator Card */}
           <div className="border border-gray-200 rounded-2xl p-8">
             <h3 className="text-[32px] font-bold text-black mb-4">Collaborator</h3>
-            <p className="text-[20px] text-[#494949] mb-4">
+            <p className="text-[16px] text-[#494949] mb-4">
               Invite team members to work on surveys with role-based permissions; view, edit, manage, or analyse, you decide who can do what.
             </p>
             <p className="text-[18px] text-[#494949]">
@@ -27,7 +27,7 @@ export default function TeamsSection() {
           {/* Interviewer Card */}
           <div className="border border-gray-200 rounded-2xl p-8">
             <h3 className="text-[32px] font-bold text-black mb-4">Interviewer</h3>
-            <p className="text-[20px] text-[#494949] mb-4">
+            <p className="text-[16px] text-[#494949] mb-4">
               Create interviewer logins for field teams or kiosks. Interviewers simply log in and start collecting responses on the Saja App.
             </p>
           </div>

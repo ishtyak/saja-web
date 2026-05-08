@@ -21,10 +21,12 @@ body {
 }
 
 .btn-primary {
-  background: #0095da;
+  background-image:url('/btn/btnBack.png');
+  background-size: 100% 100% ;
   color: white;
   border-radius: 9999px;
-  padding: 12px 28px;
+  /* padding: 10px 24px; */
+  padding: 8px 24px;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s;
@@ -33,9 +35,26 @@ body {
   gap: 8px;
 }
 
-.btn-primary:hover {
-  background: #007ab8;
+.btn-second {
+  background-image:url('/btn/btnBack.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background-size: 10% 100% ; */
+  color: white;
+  border-radius: 9999px;
+  padding: 12px 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
+
+/* .btn-primary:hover {
+  background: #007ab8;
+} */
 
 .btn-outline {
   border: 1.5px solid #0095da;

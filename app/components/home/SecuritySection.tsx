@@ -38,7 +38,7 @@ export default function SecuritySection() {
                 <path d="M34 48l10 10 18-20" stroke="#0095da" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <h2 className="text-[50px] font-bold text-black">Security &amp; Compliance</h2>
+            <h2 className="text-[36px] font-bold text-black">Security &amp; Compliance</h2>
           </div>
 
           {/* Right: features */}
@@ -47,7 +47,7 @@ export default function SecuritySection() {
               <div key={f.title} className="flex gap-4">
                 <ShieldIcon />
                 <div>
-                  <p className="text-[20px] font-medium text-[#1a191e] mb-1">{f.title}</p>
+                  <p className="text-[16px] font-medium text-[#1a191e] mb-1">{f.title}</p>
                   <p className="text-[16px] text-[#727b84]">{f.description}</p>
                 </div>
               </div>

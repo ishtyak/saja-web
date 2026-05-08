@@ -91,19 +91,19 @@ export default function WhatWeDoSection() {
       <div className="max-w-[1440px] mx-auto px-8 lg:px-16 py-16">
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           <div className="lg:w-[180px] flex-shrink-0">
-            <span className="inline-block bg-[#0095da] text-white text-[24px] font-bold px-6 py-2 rounded-md">
+            {/* <span className="inline-block bg-[#0095da] text-white text-[20px] font-bold px-6 py-2 rounded-md">
               Design
-            </span>
+            </span> */}
           </div>
           <div className="flex-1">
-            <h2 className="text-[56px] font-bold text-black mb-6">Design surveys your way</h2>
+            <h2 className="text-[44px] font-bold text-black mb-6">Design surveys your way</h2>
             <Link href="#" className="text-[22px] text-[#0095da] font-medium hover:underline mb-8 inline-block">
               Start Designing →
             </Link>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 mt-4">
               {designFeatures.map((f) => (
                 <div key={f.title}>
-                  <p className="text-[20px] font-medium text-[#1a191e] mb-1">{f.title}</p>
+                  <p className="text-[16px] font-medium text-[#1a191e] mb-1">{f.title}</p>
                   <p className="text-[16px] text-[#727b84]">{f.description}</p>
                 </div>
               ))}
@@ -118,13 +118,13 @@ export default function WhatWeDoSection() {
       <div className="max-w-[1440px] mx-auto px-8 lg:px-16 py-16">
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           <div className="lg:w-[180px] flex-shrink-0">
-            <span className="inline-block bg-[#0095da] text-white text-[24px] font-bold px-6 py-2 rounded-md">
+            {/* <span className="inline-block bg-[#0095da] text-white text-[20px] font-bold px-6 py-2 rounded-md">
               Collect
-            </span>
+            </span> */}
           </div>
           <div className="flex-1">
-            <h2 className="text-[50px] font-bold text-black mb-4">Collect Data from Users, easily</h2>
-            <p className="text-[24px] text-[#494949] mb-6">
+            <h2 className="text-[44px] font-bold text-black mb-4">Collect Data from Users, easily</h2>
+            <p className="text-[20px] text-[#494949] mb-6">
               Reach respondents where they are. Share surveys through flexible channels while keeping responses secure and organized.
             </p>
             <Link href="#" className="text-[22px] text-[#0095da] font-medium hover:underline mb-8 inline-block">
@@ -134,7 +134,7 @@ export default function WhatWeDoSection() {
               {collectFeatures.map((f) => (
                 <li key={f.title} className="flex items-start gap-3">
                   <CheckIcon />
-                  <span className="text-[20px] text-[#494949]">{f.title}</span>
+                  <span className="text-[16px] text-[#494949]">{f.title}</span>
                 </li>
               ))}
             </ul>
@@ -148,13 +148,13 @@ export default function WhatWeDoSection() {
       <div className="max-w-[1440px] mx-auto px-8 lg:px-16 py-16">
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           <div className="lg:w-[180px] flex-shrink-0">
-            <span className="inline-block bg-[#0095da] text-white text-[24px] font-bold px-6 py-2 rounded-md">
+            {/* <span className="inline-block bg-[#0095da] text-white text-[20px] font-bold px-6 py-2 rounded-md">
               Analyse
-            </span>
+            </span> */}
           </div>
           <div className="flex-1">
-            <h2 className="text-[50px] font-bold text-black mb-4">Understand Feedback Instantly</h2>
-            <p className="text-[24px] text-[#494949] mb-6">
+            <h2 className="text-[44px] font-bold text-black mb-4">Understand Feedback Instantly</h2>
+            <p className="text-[20px] text-[#494949] mb-6">
               Visual dashboards update in real time, helping you spot trends, issues, and opportunities as feedback comes in.
             </p>
             <Link href="#" className="text-[22px] text-[#0095da] font-medium hover:underline mb-8 inline-block">
@@ -163,7 +163,7 @@ export default function WhatWeDoSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 mt-4">
               {analyseFeatures.map((f) => (
                 <div key={f.title}>
-                  <p className="text-[20px] font-medium text-[#1a191e] mb-1">{f.title}</p>
+                  <p className="text-[16px] font-medium text-[#1a191e] mb-1">{f.title}</p>
                   <p className="text-[16px] text-[#727b84]">{f.description}</p>
                 </div>
               ))}

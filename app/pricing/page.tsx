@@ -91,7 +91,7 @@ function IndividualTab() {
                 : "border-gray-200 bg-white"
             }`}
           >
-            <h3 className="text-[24px] font-bold text-black mb-2">{plan.name}</h3>
+            <h3 className="text-[20px] font-bold text-black mb-2">{plan.name}</h3>
             <div className="flex items-end gap-1 mb-1">
               <span className="text-[40px] font-bold text-black">{plan.price}</span>
               {plan.priceLabel && (
@@ -115,7 +115,7 @@ function IndividualTab() {
 
       {/* Explore features */}
       <div className="text-center py-8">
-        <p className="text-[20px] text-[#494949] mb-4">Dive deeper into what you get with each plan</p>
+        <p className="text-[16px] text-[#494949] mb-4">Dive deeper into what you get with each plan</p>
         <button
           onClick={() => setShowFeatures(!showFeatures)}
           className="text-[18px] font-semibold text-[#0095da] flex items-center gap-2 mx-auto hover:underline"
@@ -219,7 +219,7 @@ function EnterpriseTab() {
       </div>
 
       <div className="text-center mt-10">
-        <p className="text-[20px] text-[#494949] mb-4">Dive deeper into what you get with each plan</p>
+        <p className="text-[16px] text-[#494949] mb-4">Dive deeper into what you get with each plan</p>
         <Link href="#" className="text-[18px] font-semibold text-[#0095da] flex items-center gap-2 mx-auto justify-center hover:underline">
           EXPLORE FEATURES
           <svg className="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
@@ -241,10 +241,10 @@ export default function PricingPage() {
       <Navbar />
       <main className="bg-white min-h-screen">
         <div className="max-w-[1440px] mx-auto px-8 lg:px-16 py-20">
-          <h1 className="text-[56px] font-bold text-black text-center mb-4">
+          <h1 className="text-[44px] font-bold text-black text-center mb-4">
             Simple pricing. Powerful insights.
           </h1>
-          <p className="text-[24px] text-[#494949] text-center mb-12">
+          <p className="text-[20px] text-[#494949] text-center mb-12">
             Choose your plan based on response volume and team size.
           </p>
 

@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="flex-1 grid grid-cols-1 sm:grid-cols-3 gap-10">
             {/* Product */}
             <div>
-              <h4 className="text-[#494949] text-[20px] font-bold mb-4">Product</h4>
+              <h4 className="text-[#494949] text-[16px] font-bold mb-4">Product</h4>
               <ul className="flex flex-col gap-3">
                 {["Features", "Pricing", "Case studies", "Reviews", "Updates"].map((item) => (
                   <li key={item}>
@@ -30,7 +30,7 @@ export default function Footer() {
 
             {/* Company */}
             <div>
-              <h4 className="text-[#494949] text-[20px] font-bold mb-4">Company</h4>
+              <h4 className="text-[#494949] text-[16px] font-bold mb-4">Company</h4>
               <ul className="flex flex-col gap-3">
                 {["About", "Contact us", "Resources"].map((item) => (
                   <li key={item}>
@@ -44,7 +44,7 @@ export default function Footer() {
 
             {/* Support */}
             <div>
-              <h4 className="text-[#494949] text-[20px] font-bold mb-4">Support</h4>
+              <h4 className="text-[#494949] text-[16px] font-bold mb-4">Support</h4>
               <ul className="flex flex-col gap-3">
                 {["Getting started", "Help center", "Server status", "Report a bug", "Chat support"].map((item) => (
                   <li key={item}>

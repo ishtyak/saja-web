@@ -49,9 +49,9 @@ export default function AboutPage() {
                 {/* Center circle */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-[140px] h-[140px] rounded-full bg-[#0095da] flex flex-col items-center justify-center text-white text-center shadow-lg">
-                    <span className="text-[20px] font-bold leading-tight">Ascend</span>
-                    <span className="text-[20px] font-bold leading-tight">with</span>
-                    <span className="text-[20px] font-bold leading-tight">Insights</span>
+                    <span className="text-[16px] font-bold leading-tight">Ascend</span>
+                    <span className="text-[16px] font-bold leading-tight">with</span>
+                    <span className="text-[16px] font-bold leading-tight">Insights</span>
                     {/* Wave underline */}
                     <svg width="60" height="10" viewBox="0 0 60 10" className="mt-1">
                       <path d="M0 5 Q15 0 30 5 Q45 10 60 5" stroke="white" strokeWidth="2" fill="none" />

@@ -80,7 +80,7 @@ export default function ResourcesPage() {
                 <a href="#" className="text-[#0095da] hover:underline">Privacy Policy</a>.
               </p>
 
-              <button className="btn-primary text-[20px] font-semibold w-full justify-center">
+              <button className="btn-primary text-[16px] font-semibold w-full justify-center">
                 Download the Booklet
               </button>
             </div>
