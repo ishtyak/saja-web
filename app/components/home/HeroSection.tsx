@@ -25,7 +25,7 @@ export default function HeroSection() {
       </div>
 
       {/* Yellow banner */}
-      <div className="w-full bg-[#f5a623] py-5">
+      <div id="features" className="w-full bg-[#f5a623] py-5">
         <p className="text-center text-white text-[42px] font-bold">What we do?</p>
       </div>
 

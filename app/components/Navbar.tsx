@@ -64,7 +64,7 @@ export default function Navbar() {
           >
             Login
           </Link>
-          <Link href="https://insights.saja.biz/login" className="relative inline-flex items-center">
+          <Link href="https://insights.saja.biz/signup" className="relative inline-flex items-center">
             <button className="btn-primary text-[16px]">
               Get Started
             </button>
@@ -109,7 +109,7 @@ export default function Navbar() {
             <Link href="https://insights.saja.biz/login" target="_blank" className="btn-outline text-center">
               Login
             </Link>
-            <Link href="https://insights.saja.biz/login" target="_blank" className="btn-primary justify-center text-center">
+            <Link href="https://insights.saja.biz/signup" target="_blank" className="btn-primary justify-center text-center">
               Get Started
             </Link>
           </div>

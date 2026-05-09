@@ -18,10 +18,10 @@ export default function Footer() {
             <div>
               <h4 className="text-[#494949] text-[16px] font-bold mb-4">Product</h4>
               <ul className="flex flex-col gap-3">
-                {["Features", "Pricing", "Case studies", "Reviews", "Updates"].map((item) => (
-                  <li key={item}>
-                    <Link href="#" className="text-[#929292] text-[18px] hover:text-[#0095da] transition-colors">
-                      {item}
+                {[{label:"Features",href:'/#features'}, {label:"Pricing",href:'/pricing'}, {label:"Case studies",href:'/#'}, {label:"Reviews",href:'/#'}, {label:"Updates",href:'/#'}].map((item) => (
+                  <li key={item.label}>
+                    <Link href={item.href} className="text-[#929292] text-[18px] hover:text-[#0095da] transition-colors">
+                      {item.label}
                     </Link>
                   </li>
                 ))}
@@ -32,10 +32,10 @@ export default function Footer() {
             <div>
               <h4 className="text-[#494949] text-[16px] font-bold mb-4">Company</h4>
               <ul className="flex flex-col gap-3">
-                {["About", "Contact us", "Resources"].map((item) => (
-                  <li key={item}>
-                    <Link href="#" className="text-[#929292] text-[18px] hover:text-[#0095da] transition-colors">
-                      {item}
+                {[{label:"About",href:'/about'}, {label:"Contact us",href:'/#contact'}, {label:"Resources",href:'/resources'}].map((item) => (
+                  <li key={item.label}>
+                    <Link href={item.href} className="text-[#929292] text-[18px] hover:text-[#0095da] transition-colors">
+                      {item.label}
                     </Link>
                   </li>
                 ))}
@@ -86,7 +86,7 @@ export default function Footer() {
               </svg>
             </a>
             {/* LinkedIn */}
-            <a href="#" className="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center hover:border-[#0095da] hover:text-[#0095da] text-[#494949] transition-colors">
+            <a href="https://www.linkedin.com/company/listenwithsaja/" target="_blank" className="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center hover:border-[#0095da] hover:text-[#0095da] text-[#494949] transition-colors">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
                 <circle cx="4" cy="4" r="2" />
