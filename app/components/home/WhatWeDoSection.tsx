@@ -78,7 +78,7 @@ const analyseFeatures = [
 
 function CheckIcon() {
   return (
-    <svg className="w-5 h-5 text-[#0095da] flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+    <svg className="w-5 h-5 text-[#0095da] shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
     </svg>
   );
@@ -88,23 +88,18 @@ export default function WhatWeDoSection() {
   return (
     <section className="w-full bg-white">
       {/* Design */}
-      <div className="max-w-[1440px] mx-auto px-8 lg:px-16 py-16">
+      <div className="max-w-360 mx-auto px-8 lg:px-20 py-5">
         <div className="flex flex-col lg:flex-row gap-12 items-start">
-          <div className="lg:w-[180px] flex-shrink-0">
-            {/* <span className="inline-block bg-[#0095da] text-white text-[20px] font-bold px-6 py-2 rounded-md">
-              Design
-            </span> */}
-          </div>
           <div className="flex-1">
-            <h2 className="text-[44px] font-bold text-black mb-6">Design surveys your way</h2>
-            <Link href="#" className="text-[22px] text-[#0095da] font-medium hover:underline mb-8 inline-block">
+            <h2 className="text-[36px] font-bold text-black mb-2">Design surveys your way</h2>
+            <Link href="#" className="text-[18px] text-[#0095da] font-medium hover:underline mb-2 inline-block">
               Start Designing →
             </Link>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 mt-4">
               {designFeatures.map((f) => (
                 <div key={f.title}>
-                  <p className="text-[16px] font-medium text-[#1a191e] mb-1">{f.title}</p>
-                  <p className="text-[16px] text-[#727b84]">{f.description}</p>
+                  <p className="text-[14px] font-medium text-[#1a191e] mb-1">{f.title}</p>
+                  <p className="text-[14px] text-[#727b84]">{f.description}</p>
                 </div>
               ))}
             </div>
@@ -115,26 +110,21 @@ export default function WhatWeDoSection() {
       <div className="border-t border-gray-100" />
 
       {/* Collect */}
-      <div className="max-w-[1440px] mx-auto px-8 lg:px-16 py-16">
+      <div className="max-w-360 mx-auto px-8 lg:px-20 py-5">
         <div className="flex flex-col lg:flex-row gap-12 items-start">
-          <div className="lg:w-[180px] flex-shrink-0">
-            {/* <span className="inline-block bg-[#0095da] text-white text-[20px] font-bold px-6 py-2 rounded-md">
-              Collect
-            </span> */}
-          </div>
           <div className="flex-1">
-            <h2 className="text-[44px] font-bold text-black mb-4">Collect Data from Users, easily</h2>
-            <p className="text-[20px] text-[#494949] mb-6">
+            <h2 className="text-[36px] font-bold text-black mb-2">Collect Data from Users, easily</h2>
+            <p className="text-[18px] text-[#494949] mb-2">
               Reach respondents where they are. Share surveys through flexible channels while keeping responses secure and organized.
             </p>
             <Link href="#" className="text-[22px] text-[#0095da] font-medium hover:underline mb-8 inline-block">
               Collect →
             </Link>
-            <ul className="flex flex-col gap-3 mt-4">
+            <ul className="flex flex-col gap-3 ">
               {collectFeatures.map((f) => (
                 <li key={f.title} className="flex items-start gap-3">
                   <CheckIcon />
-                  <span className="text-[16px] text-[#494949]">{f.title}</span>
+                  <span className="text-[14px] text-[#494949]">{f.title}</span>
                 </li>
               ))}
             </ul>
@@ -145,26 +135,21 @@ export default function WhatWeDoSection() {
       <div className="border-t border-gray-100" />
 
       {/* Analyse */}
-      <div className="max-w-[1440px] mx-auto px-8 lg:px-16 py-16">
+      <div className="max-w-360 mx-auto px-8 lg:px-20 py-5">
         <div className="flex flex-col lg:flex-row gap-12 items-start">
-          <div className="lg:w-[180px] flex-shrink-0">
-            {/* <span className="inline-block bg-[#0095da] text-white text-[20px] font-bold px-6 py-2 rounded-md">
-              Analyse
-            </span> */}
-          </div>
           <div className="flex-1">
-            <h2 className="text-[44px] font-bold text-black mb-4">Understand Feedback Instantly</h2>
-            <p className="text-[20px] text-[#494949] mb-6">
+            <h2 className="text-[36px] font-bold text-black mb-2">Understand Feedback Instantly</h2>
+            <p className="text-[18px] text-[#494949] mb-2">
               Visual dashboards update in real time, helping you spot trends, issues, and opportunities as feedback comes in.
             </p>
-            <Link href="#" className="text-[22px] text-[#0095da] font-medium hover:underline mb-8 inline-block">
+            <Link href="#" className="text-[18px] text-[#0095da] font-medium hover:underline mb-6 inline-block">
               Begin Analyzing →
             </Link>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 mt-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
               {analyseFeatures.map((f) => (
                 <div key={f.title}>
-                  <p className="text-[16px] font-medium text-[#1a191e] mb-1">{f.title}</p>
-                  <p className="text-[16px] text-[#727b84]">{f.description}</p>
+                  <p className="text-[14px] font-medium text-[#1a191e] mb-1">{f.title}</p>
+                  <p className="text-[14px] text-[#727b84]">{f.description}</p>
                 </div>
               ))}
             </div>

@@ -12,18 +12,14 @@ import ContactSection from "./components/home/ContactSection";
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <main>
-        <HeroSection />
-        <WhatWeDoSection />
-        <AISection />
-        <TeamsSection />
-        <SecuritySection />
-        <IndustriesSection />
-        <SajaAppSection />
-        <ContactSection />
-      </main>
-      <Footer />
+      <HeroSection />
+      <WhatWeDoSection />
+      <AISection />
+      <TeamsSection />
+      <SecuritySection />
+      <IndustriesSection />
+      <SajaAppSection />
+      <ContactSection />
     </>
   );
 }

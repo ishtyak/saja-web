@@ -4,12 +4,12 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-[#f8f9fa] border-t border-gray-200">
-      <div className="max-w-[1440px] mx-auto px-8 lg:px-16 py-16">
+      <div className="max-w-360 mx-auto px-8 lg:px-16 py-16">
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Logo & Tagline */}
-          <div className="lg:w-[320px] flex-shrink-0">
+          <div className="lg:w-[320px] shrink-0">
             <Image src="/saja-logo.png" alt="Saja Logo" width={100} height={65} style={{ height: "auto" }} />
-            <p className="text-[#494949] text-[30px] font-bold mt-3">Ascend with Insights</p>
+            <p className="text-[#494949] text-[18px] font-bold mt-3">Ascend with Insights</p>
           </div>
 
           {/* Links */}
@@ -20,7 +20,7 @@ export default function Footer() {
               <ul className="flex flex-col gap-3">
                 {[{label:"Features",href:'/#features'}, {label:"Pricing",href:'/pricing'}, {label:"Case studies",href:'/#'}, {label:"Reviews",href:'/#'}, {label:"Updates",href:'/#'}].map((item) => (
                   <li key={item.label}>
-                    <Link href={item.href} className="text-[#929292] text-[18px] hover:text-[#0095da] transition-colors">
+                    <Link href={item.href} className="text-[#929292] text-[14px] hover:text-[#0095da] transition-colors">
                       {item.label}
                     </Link>
                   </li>
@@ -32,9 +32,9 @@ export default function Footer() {
             <div>
               <h4 className="text-[#494949] text-[16px] font-bold mb-4">Company</h4>
               <ul className="flex flex-col gap-3">
-                {[{label:"About",href:'/about'}, {label:"Contact us",href:'/#contact'}, {label:"Resources",href:'/resources'}].map((item) => (
+                {[{label:"About",href:'/about'}, {label:"Contact us",href:'/#contact'}, {label:"Resources",href:'/resources'}, {label:"Faq",href:'/faq'}].map((item) => (
                   <li key={item.label}>
-                    <Link href={item.href} className="text-[#929292] text-[18px] hover:text-[#0095da] transition-colors">
+                    <Link href={item.href} className="text-[#929292] text-[14px] hover:text-[#0095da] transition-colors">
                       {item.label}
                     </Link>
                   </li>
@@ -48,7 +48,7 @@ export default function Footer() {
               <ul className="flex flex-col gap-3">
                 {["Getting started", "Help center", "Server status", "Report a bug", "Chat support"].map((item) => (
                   <li key={item}>
-                    <Link href="#" className="text-[#494949] text-[18px] hover:text-[#0095da] transition-colors">
+                    <Link href="#" className="text-[#929292] text-[14px] hover:text-[#0095da] transition-colors">
                       {item}
                     </Link>
                   </li>
@@ -60,7 +60,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[#494949] text-[18px]">
+          <p className="text-[#494949] text-[14px]">
             Copyright © 2026 SAJA Feedback Insights | All Rights Reserved
           </p>
           {/* Social Icons */}

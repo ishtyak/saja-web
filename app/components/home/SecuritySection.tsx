@@ -28,10 +28,10 @@ function ShieldIcon() {
 export default function SecuritySection() {
   return (
     <section className="w-full bg-[#f8f9fa] py-20">
-      <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
+      <div className="max-w-360 mx-auto px-8 lg:px-16">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           {/* Left: shield icon + title */}
-          <div className="lg:w-[400px] flex-shrink-0">
+          <div className="lg:w-100 shrink-0">
             <div className="w-24 h-24 flex items-center justify-center mb-6">
               <svg viewBox="0 0 96 96" fill="none" className="w-full h-full">
                 <path d="M48 8L12 24v28c0 22.4 15.4 43.3 36 48 20.6-4.7 36-25.6 36-48V24L48 8z" fill="#e6f4fb" stroke="#0095da" strokeWidth="3"/>

@@ -100,26 +100,26 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="w-full bg-white py-20">
-      <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
-        <div className="flex flex-col lg:flex-row gap-16 items-start">
+      <div className="max-w-360 mx-auto px-8 lg:px-16">
+        <div className="flex  flex-col lg:flex-row gap-16 items-start">
 
           {/* Left */}
-          <div className="lg:w-[400px] flex-shrink-0">
+          <div className="lg:w-100 shrink-0">
             <h2 className="text-[36px] font-bold text-black mb-4">
               Get in touch with Saja
             </h2>
 
-            <p className="text-[20px] text-[#494949] mb-6">
+            <p className="text-[14px] text-[#494949] mb-6">
               Whether you're looking to run smarter surveys, explore CX use
               cases, or just understand if Saja is right for you, we're here to
               help.
             </p>
 
-            <h3 className="text-[26px] font-bold text-[#0095da] mb-3">
+            <h3 className="text-[18px] font-bold text-[#0095da] mb-3">
               What can we help you with?
             </h3>
 
-            <ul className="flex flex-col gap-2 text-[18px] text-[#727b84]">
+            <ul className="flex flex-col gap-2 text-[14px] text-[#727b84]">
               <li>• Request a product demo</li>
               <li>• Discuss your survey or CX requirements</li>
               <li>• Know insights with industry experts</li>
@@ -132,7 +132,7 @@ export default function ContactSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 
               <div>
-                <label className="block text-[18px] font-medium mb-2">
+                <label className="block text-[14px] font-medium mb-2">
                   Name
                 </label>
                 <input
@@ -146,7 +146,7 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <label className="block text-[18px] font-medium mb-2">
+                <label className="block text-[14px] font-medium mb-2">
                   Last Name
                 </label>
                 <input
@@ -160,7 +160,7 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <label className="block text-[18px] font-medium mb-2">
+                <label className="block text-[14px] font-medium mb-2">
                   Business Email
                 </label>
                 <input
@@ -174,7 +174,7 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <label className="block text-[18px] font-medium mb-2">
+                <label className="block text-[14px] font-medium mb-2">
                   Country
                 </label>
                 <select
@@ -193,7 +193,7 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <label className="block text-[18px] font-medium mb-2">
+                <label className="block text-[14px] font-medium mb-2">
                   Contact Number
                 </label>
                 <input
@@ -208,7 +208,7 @@ export default function ContactSection() {
             </div>
 
             <div className="mb-6">
-              <label className="block text-[18px] font-medium mb-2">
+              <label className="block text-[14px] font-medium mb-2">
                 Leave us message
               </label>
 
@@ -230,12 +230,12 @@ export default function ContactSection() {
                 className="mt-1 w-4 h-4"
               />
 
-              <label className="text-[18px] font-medium">
+              <label className="text-[14px] font-medium">
                 I give Saja permission to contact me
               </label>
             </div>
 
-            <p className="text-[18px] text-[#494949] mb-8">
+            <p className="text-[14px] text-[#494949] mb-8">
               By providing this information, you agree that we may process your
               personal data in accordance with our Privacy Policy.
             </p>
@@ -251,7 +251,7 @@ export default function ContactSection() {
             <button
               onClick={sendQuery}
               disabled={loading}
-              className="btn-second text-[20px] font-semibold justify-center"
+              className="btn-second text-[14px] font-semibold justify-center"
             >
               {loading ? "Submitting..." : "Connect with Saja"}
             </button>

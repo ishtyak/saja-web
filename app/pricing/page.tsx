@@ -99,7 +99,7 @@ function IndividualTab() {
               )}
             </div>
             <p className="text-[14px] text-[#494949] mb-6">{plan.sub}</p>
-            <button className="btn-primary w-full justify-center mb-6">{plan.ctaLabel}</button>
+            <Link href={'/#contact'} style={{padding:"5px 20px"}} className="btn-primary justify-center mb-6">{plan.ctaLabel}</Link>
             <p className="text-[16px] text-[#0095da] font-medium mb-4">{plan.responses}</p>
             <ul className="flex flex-col gap-2 w-full">
               {plan.features.map((f) => (
@@ -238,9 +238,7 @@ export default function PricingPage() {
 
   return (
     <>
-      <Navbar />
-      <main className="bg-white min-h-screen">
-        <div className="max-w-[1440px] mx-auto px-8 lg:px-16 py-20">
+        <div className="max-w-360 mx-auto px-8 lg:px-16 py-20">
           <h1 className="text-[44px] font-bold text-black text-center mb-4">
             Simple pricing. Powerful insights.
           </h1>
@@ -273,8 +271,6 @@ export default function PricingPage() {
           {activeTab === "Enterprise" && <EnterpriseTab />}
           {activeTab === "Market Research" && <IndividualTab />}
         </div>
-      </main>
-      <Footer />
     </>
   );
 }

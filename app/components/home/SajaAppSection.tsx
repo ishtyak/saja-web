@@ -34,14 +34,14 @@ function CheckIcon() {
 export default function SajaAppSection() {
   return (
     <section className="w-full bg-[#f0f8ff] py-20">
-      <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
+      <div className="max-w-360 mx-auto px-8 lg:px-16">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           {/* Text content */}
           <div className="flex-1">
-            <h2 className="text-[44px] font-bold text-[#0095da] mb-4">
+            <h2 className="text-[36px]  text-[#0095da] mb-4">
               Saja App for Offline Data Collection
             </h2>
-            <p className="text-[20px] text-[#494949] mb-10">
+            <p className="text-[18px] text-[#494949] mb-10">
               Empower your teams to capture real-world feedback anywhere.
             </p>
             <ul className="flex flex-col gap-5 mb-10">
@@ -55,14 +55,14 @@ export default function SajaAppSection() {
                 </li>
               ))}
             </ul>
-            <Link href="/get-started" className="text-[22px] text-[#0095da] font-medium hover:underline">
+            <Link href="/get-started" className="text-[18px] text-[#0095da] font-medium hover:underline">
               Get Started with App →
             </Link>
           </div>
 
           {/* App mockup placeholder */}
-          <div className="lg:w-[350px] flex-shrink-0 flex justify-center">
-            <div className="w-[250px] h-[480px] bg-white rounded-[40px] shadow-2xl border-4 border-gray-200 flex flex-col overflow-hidden">
+          <div className="lg:w-87.5 shrink-0 flex justify-center">
+            <div className="w-62.5 h-120 bg-white rounded-[40px] shadow-2xl border-4 border-gray-200 flex flex-col overflow-hidden">
               {/* Phone header */}
               <div className="bg-[#0095da] px-4 py-3 flex items-center gap-2">
                 <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">

@@ -18,9 +18,9 @@ export default function Navbar() {
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
-      <div className="max-w-[1440px] mx-auto px-8 lg:px-16 h-[80px] flex items-center justify-between">
+      <div className="max-w-360 mx-auto px-8 lg:px-16 h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+        <Link href="/" className="flex items-center gap-2 shrink-0">
           <Image
             src="/saja-logo.png"
             alt="Saja Logo"
@@ -50,22 +50,22 @@ export default function Navbar() {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4">
-          <button className="flex items-center gap-2 text-[#494949] text-[16px] font-medium hover:text-[#0095da] transition-colors">
+          <Link href={"/#contact"} className="flex items-center gap-2 text-[#494949] text-[16px] font-medium hover:text-[#0095da] transition-colors">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="12" cy="12" r="10" />
               <line x1="2" y1="12" x2="22" y2="12" />
               <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
             </svg>
             Support
-          </button>
+          </Link>
           <Link
             href="https://insights.saja.biz/login"
-            className="text-[16px] font-semibold text-[#494949] border border-gray-300 rounded-full px-6 py-2 hover:border-[#0095da] hover:text-[#0095da] transition-colors"
+            className="text-[16px]  px-6 py-2 hover:border-[#0095da] hover:text-[#0095da] transition-colors"
           >
             Login
           </Link>
           <Link href="https://insights.saja.biz/signup" className="relative inline-flex items-center">
-            <button className="btn-primary text-[16px]">
+            <button className="btn-primary text-[14px]">
               Get Started
             </button>
           </Link>

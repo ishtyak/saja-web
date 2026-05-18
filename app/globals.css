@@ -18,6 +18,11 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+*{
+  scrollbar-width: thin;
 }
 
 .btn-primary {
@@ -26,8 +31,8 @@ body {
   color: white;
   border-radius: 9999px;
   /* padding: 10px 24px; */
-  padding: 8px 24px;
-  font-weight: 600;
+  padding: 4px 24px;
+  /* font-weight: 600; */
   cursor: pointer;
   transition: background 0.2s;
   display: inline-flex;
@@ -43,8 +48,8 @@ body {
   /* background-size: 10% 100% ; */
   color: white;
   border-radius: 9999px;
-  padding: 12px 24px;
-  font-weight: 600;
+  padding: 8px 24px;
+  font-weight: 200;
   cursor: pointer;
   transition: background 0.2s;
   display: inline-flex;

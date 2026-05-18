@@ -1,20 +1,24 @@
+import { Hospital, Hotel, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 
 const industries = [
   {
     name: "Hospitality & Tourism",
-    description: "Guest satisfaction surveys, real-time service recovery, and multi-location feedback tracking.",
-    icon: "🏨",
+    description:
+      "Guest satisfaction surveys, real-time service recovery, and multi-location feedback tracking.",
+    icon: Hotel,
   },
   {
     name: "Healthcare",
-    description: "Patient experience measurement, post-care follow-ups, and clinical feedback collection.",
-    icon: "🏥",
+    description:
+      "Patient experience measurement, post-care follow-ups, and clinical feedback collection.",
+    icon: Hospital,
   },
   {
     name: "Retail & FMCG",
-    description: "In-store feedback, product satisfaction surveys, and customer journey insights.",
-    icon: "🛒",
+    description:
+      "In-store feedback, product satisfaction surveys, and customer journey insights.",
+    icon: ShoppingCart,
   },
 ];
 
@@ -22,29 +26,50 @@ export default function IndustriesSection() {
   return (
     <section className="w-full bg-white py-20">
       <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
-        <h2 className="text-[44px] font-bold text-[#0095da] text-center mb-4">
+        <h2 className="text-[36px] font-bold text-[#0095da] text-center mb-4">
           Feedback solutions for every industry
         </h2>
-        <p className="text-[20px] text-[#494949] text-center max-w-3xl mx-auto mb-16">
-          Saja adapts to how different organizations ask questions and act on answers. Fast or deep, anonymous or tracked.
+
+        <p className="text-[16px] text-[#494949] text-center max-w-3xl mx-auto mb-16">
+          Saja adapts to how different organizations ask questions and act on
+          answers. Fast or deep, anonymous or tracked.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {industries.map((ind) => (
-            <div key={ind.name} className="border border-gray-200 rounded-2xl p-8">
-              <div className="text-4xl mb-4">{ind.icon}</div>
-              <h3 className="text-[16px] font-semibold text-black mb-3">{ind.name}</h3>
-              <p className="text-[16px] text-[#494949]">{ind.description}</p>
-            </div>
-          ))}
+          {industries.map((ind) => {
+            const Icon = ind.icon;
+
+            return (
+              <div
+                key={ind.name}
+                className="border border-gray-200 rounded-2xl p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="mb-4">
+                  <Icon size={40} className="text-[#0095da]" />
+                </div>
+
+                <h3 className="text-[16px] font-semibold text-black mb-3">
+                  {ind.name}
+                </h3>
+
+                <p className="text-[16px] text-[#494949]">
+                  {ind.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
 
         {/* CTA Banner */}
-        <div className="bg-[#f5a623] rounded-2xl py-6 px-10 text-center">
-          <h3 className="text-[40px] font-bold text-black mb-6">
+        <div className="bg-[#f5a623] rounded-2xl  pb-2 px-10 text-center">
+          <h3 className="text-[36px] font-bold text-black mb-6">
             Want a quick demo for your industry?
           </h3>
-          <Link href="#contact" className="btn-primary text-[26px] font-bold">
+
+          <Link
+            href="#contact"
+            className="inline-flex items-center justify-center rounded-xl bg-[#0095da] px-6 py-3 text-[18px] font-bold text-white hover:opacity-90 transition"
+          >
             Book a Demo
           </Link>
         </div>
