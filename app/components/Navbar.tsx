@@ -106,10 +106,10 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="flex flex-col gap-3 pt-2 border-t border-gray-100">
-            <Link href="https://insights.saja.biz/login" target="_blank" className="btn-outline text-center">
+            <Link href="https://insights.saja.biz/login" target="_blank" className="w-1/2 border rounded-full py-1 px-3 text-center">
               Login
             </Link>
-            <Link href="https://insights.saja.biz/signup" target="_blank" className="btn-primary justify-center text-center">
+            <Link href="https://insights.saja.biz/signup" target="_blank" style={{padding:"5px 0px",width:"50%"}} className="btn-primary justify-center text-center">
               Get Started
             </Link>
           </div>

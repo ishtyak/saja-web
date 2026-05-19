@@ -20,7 +20,7 @@ export default function ResourcesPage() {
           </div>
 
           {/* Form */}
-          <div className="flex-1 w-1/2">
+          <div className="flex-1 sm:w-1/2">
             <h1 className="text-[36px] font-bold text-black mb-4">
               The Art &amp; Science of Memorable Customer Experience
             </h1>
