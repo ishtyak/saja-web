@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const designFeatures = [
@@ -88,10 +89,15 @@ export default function WhatWeDoSection() {
   return (
     <section className="w-full bg-white">
       {/* Design */}
-      <div className="max-w-360 mx-auto px-8 lg:px-20 py-5">
+      <div className="max-w-360 mx-auto px-8 lg:px-20 py-20">
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           <div className="flex-1">
             <h2 className="text-[36px] font-bold text-black mb-2">Design surveys your way</h2>
+            <div className="">
+              <p className="my-4 text-[16px] ">
+                Start from a blank canvas, use AI or upload your Questionnaire, all your choice. Customize every element without compromising speed or structure.
+              </p>
+            </div>
             <Link href="#" className="text-[18px] text-[#0095da] font-medium hover:underline mb-2 inline-block">
               Start Designing →
             </Link>
@@ -110,7 +116,7 @@ export default function WhatWeDoSection() {
       <div className="border-t border-gray-100" />
 
       {/* Collect */}
-      <div className="max-w-360 mx-auto px-8 lg:px-20 py-5">
+      <div className="max-w-360 mx-auto px-8 lg:px-20 pb-20">
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           <div className="flex-1">
             <h2 className="text-[36px] font-bold text-black mb-2">Collect Data from Users, easily</h2>
@@ -129,13 +135,21 @@ export default function WhatWeDoSection() {
               ))}
             </ul>
           </div>
+          <div className="">
+            <ul className="flex justify-between mb-2 font-bold text-[#0095DA]">
+              <li className="underline">Email</li>
+              <li className="underline">Link & QR</li>
+              <li className="underline">Saja App</li>
+            </ul>
+            <Image src={'/figma-refs/collect.png'} alt="Collect" height={400} width={600}></Image>
+          </div>
         </div>
       </div>
 
       <div className="border-t border-gray-100" />
 
       {/* Analyse */}
-      <div className="max-w-360 mx-auto px-8 lg:px-20 py-5">
+      <div className="max-w-360 mx-auto px-8 lg:px-20 pb-20">
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           <div className="flex-1">
             <h2 className="text-[36px] font-bold text-black mb-2">Understand Feedback Instantly</h2>

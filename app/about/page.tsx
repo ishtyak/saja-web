@@ -5,17 +5,13 @@ export default function AboutPage() {
   return (
     <>
       <div className="max-w-360 mx-auto px-8 lg:px-16 ">
-        {/* Three-column layout matching Figma design */}
         <div className="flex flex-col lg:flex-row gap-8 items-center justify-center min-h-125">
-          {/* Left: Curiosity & Empathy */}
           <div className="lg:w-87.5 text-center lg:text-right">
             <h2 className="text-[28px] font-bold text-[#0095da] mb-4">Curiosity &amp; Empathy</h2>
             <p className="text-[16px] text-[#494949] leading-relaxed">
               Our name is inspired from two words, Questions and Answers. In Arabic, sa is the first letter of sawal which means question and ja is the first word of jawab which means answers. We celebrate curiosity and empathy. We strongly believe in the value of the oft-cited phrase that anthropology &quot;makes the familiar strange and the strange familiar.&quot; The wave symbol in our logo represents curiosity and pursuit of advancement, which is what makes the mankind more fulfilled and alive.
             </p>
           </div>
-
-          {/* Center: Circular diagram */}
           <div className="lg:w-85 shrink-0 flex justify-center">
             <div className="relative w-[320px] h-80">
               {/* Outer ring text */}
@@ -58,8 +54,6 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-
-          {/* Right: Dialogue & Growth */}
           <div className="lg:w-87.5 text-center lg:text-left">
             <h2 className="text-[28px] font-bold text-[#0095da] mb-4">Dialogue &amp; Growth</h2>
             <p className="text-[16px] text-[#494949] leading-relaxed">
@@ -68,13 +62,13 @@ export default function AboutPage() {
           </div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 ">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 pb-20 ">
           <div className="max-w-6xl">
             <h2 className="text-[36px] text-[#0095da] mb-10">
               Why Businesses Choose Saja
             </h2>
 
-            <div className="space-y-6 text-[16px] leading-[1.9] text-[#4a4a4a]">
+            <div className="space-y-6 text-[16px] font-light leading-[1.9] text-[#4a4a4a]">
               <p>
                 At Saja, we're all about understanding your customers and
                 helping you make smart, data-driven decisions.

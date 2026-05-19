@@ -24,8 +24,8 @@ export default function Navbar() {
           <Image
             src="/saja-logo.png"
             alt="Saja Logo"
-            width={78}
-            height={50}
+            width={100}
+            height={60}
             style={{ height: "auto" }}
             priority
           />
@@ -60,7 +60,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="https://insights.saja.biz/login"
-            className="text-[16px]  px-6 py-2 hover:border-[#0095da] hover:text-[#0095da] transition-colors"
+            className="text-[16px] border border-gray-300 rounded-full px-6 py-1 hover:border-[#0095da] hover:text-[#0095da] transition-colors"
           >
             Login
           </Link>

@@ -99,7 +99,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="w-full bg-white py-20">
+    <section id="contact" className="w-full bg-linear-to-b from-[#FDDF7E] to-[#0095DA] py-20">
       <div className="max-w-360 mx-auto px-8 lg:px-16">
         <div className="flex  flex-col lg:flex-row gap-16 items-start">
 
@@ -222,12 +222,12 @@ export default function ContactSection() {
               />
             </div>
 
-            <div className="mb-4 flex items-start gap-3">
+            <div className="mb-4 flex items-center gap-3">
               <input
                 type="checkbox"
                 checked={agreed}
                 onChange={(e) => setAgreed(e.target.checked)}
-                className="mt-1 w-4 h-4"
+                className=" w-4 h-4"
               />
 
               <label className="text-[14px] font-medium">

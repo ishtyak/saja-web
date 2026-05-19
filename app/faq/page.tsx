@@ -138,7 +138,8 @@ export default function DynamicAccordion() {
     };
 
     return (
-        <div className="w-full max-w-4xl mx-auto space-y-4">
+        <div className="w-full max-w-4xl mx-auto space-y-4 py-10">
+            <p className="text-[30px] font-semibold">Frequently Asked Questions - General</p>
             {items.map((item, index) => {
                 const isOpen = openIndex === index;
 
@@ -151,7 +152,7 @@ export default function DynamicAccordion() {
                             onClick={() => toggleAccordion(index)}
                             className="w-full flex items-center justify-between px-6 py-5 text-left bg-white hover:bg-gray-50 transition"
                         >
-                            <h3 className="text-[18px] font-semibold text-[#2f2f2f]">
+                            <h3 className="text-[18px]  border-b text-[#2f2f2f]">
                                 {item.title}
                             </h3>
 
@@ -168,7 +169,7 @@ export default function DynamicAccordion() {
                                 }`}
                         >
                             <div className="overflow-hidden">
-                                <div className="px-6 pb-5 text-[#5a5a5a] leading-7">
+                                <div className="px-6 pb-5 text-[16] text-[#5a5a5a] leading-7">
                                     {item.description}
                                 </div>
                             </div>

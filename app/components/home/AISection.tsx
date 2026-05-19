@@ -32,11 +32,11 @@ export default function AISection() {
           AI-powered assistance at every stage, from building your survey to understanding what your customers truly mean.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 gap-x-0 justify-items-center">
           {aiFeatures.map((f) => (
             <div
               key={f.title}
-              className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100"
+              className="bg-white rounded-2xl opacity-70 bg-linear-to-b  from-[#FDDF7E] to-[#0095DA] max-w-80 p-8 shadow-sm border border-gray-100"
             >
               <h3 className="text-[18px] text-black mb-3">{f.title}</h3>
               <p className="text-[14px] text-[#494949]">{f.description}</p>
