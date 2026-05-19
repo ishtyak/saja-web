@@ -383,13 +383,13 @@ function IndividualFeatureTable() {
               <div className="w-1/2 md:w-2/5">
                 <p className="text-[15px] text-[#494949]">{row.feature}</p>
               </div>
-              <div className="w-1/6 md:w-1/5 text-center">
+              <div className="w-1/6 md:w-1/5 ">
                 <CellValue val={row.free} />
               </div>
-              <div className="w-1/6 md:w-1/5 text-center">
+              <div className="w-1/6 md:w-1/5 ">
                 <CellValue val={row.standard} />
               </div>
-              <div className="w-1/6 md:w-1/5 text-center">
+              <div className="w-1/6 md:w-1/5 ">
                 <CellValue val={row.advantage} />
               </div>
             </div>
@@ -412,10 +412,10 @@ function TeamsFeatureTable() {
               <div className="w-1/2 md:w-2/5">
                 <p className="text-[15px] text-[#494949]">{row.feature}</p>
               </div>
-              <div className="w-1/4 md:w-1/5 text-center">
+              <div className="w-1/4 md:w-1/5 ">
                 <CellValue val={row.standard} />
               </div>
-              <div className="w-1/4 md:w-1/5 text-center">
+              <div className="w-1/4 md:w-1/5 ">
                 <CellValue val={row.advantage} />
               </div>
             </div>
@@ -438,13 +438,13 @@ function MarketResearchFeatureTable() {
               <div className="w-2/5">
                 <p className="text-[15px] text-[#494949]">{row.feature}</p>
               </div>
-              <div className="w-1/5 text-center">
+              <div className="w-1/5 ">
                 <CellValue val={row.basic} />
               </div>
-              <div className="w-1/5 text-center">
+              <div className="w-1/5 ">
                 <CellValue val={row.pro} />
               </div>
-              <div className="w-1/5 text-center">
+              <div className="w-1/5 ">
                 <CellValue val={row.enterprise} />
               </div>
             </div>
