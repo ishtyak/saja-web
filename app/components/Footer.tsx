@@ -15,10 +15,11 @@ export default function Footer() {
           {/* Links */}
           <div className="lg:w-1/2 flex-1 grid grid-cols-1 sm:grid-cols-3 gap-10">
             {/* Product */}
+            {/* , {label:"Case studies",href:'/#'}, {label:"Reviews",href:'/#'}, {label:"Updates",href:'/#'} */}
             <div>
               <h4 className="text-[#494949] text-[16px] font-bold mb-4">Product</h4>
               <ul className="flex flex-col gap-3">
-                {[{label:"Features",href:'/#features'}, {label:"Pricing",href:'/pricing'}, {label:"Case studies",href:'/#'}, {label:"Reviews",href:'/#'}, {label:"Updates",href:'/#'}].map((item) => (
+                {[{label:"Features",href:'/#features'}, {label:"Pricing",href:'/pricing'}].map((item) => (
                   <li key={item.label}>
                     <Link href={item.href} className="text-[#929292] text-[14px] hover:text-[#0095da] transition-colors">
                       {item.label}
@@ -32,7 +33,7 @@ export default function Footer() {
             <div>
               <h4 className="text-[#494949] text-[16px] font-bold mb-4">Company</h4>
               <ul className="flex flex-col gap-3">
-                {[{label:"About",href:'/about'}, {label:"Contact us",href:'/#contact'}, {label:"Resources",href:'/resources'}, {label:"Faq",href:'/faq'}].map((item) => (
+                {[{label:"About",href:'/about'}, {label:"Contact us",href:'/#contact'}, {label:"Resources",href:'/resources'}, {label:"Faq",href:'/faq'},{label:"Privacy Policy",href:'/privacy-policy'},{label:"Terms of Use",href:'/terms-of-use'}].map((item) => (
                   <li key={item.label}>
                     <Link href={item.href} className="text-[#929292] text-[14px] hover:text-[#0095da] transition-colors">
                       {item.label}
@@ -43,13 +44,14 @@ export default function Footer() {
             </div>
 
             {/* Support */}
+             {/* "Help center", "Server status", "Report a bug", "Chat support" */}
             <div>
               <h4 className="text-[#494949] text-[16px] font-bold mb-4">Support</h4>
               <ul className="flex flex-col gap-3">
-                {["Getting started", "Help center", "Server status", "Report a bug", "Chat support"].map((item) => (
-                  <li key={item}>
-                    <Link href="#" className="text-[#929292] text-[14px] hover:text-[#0095da] transition-colors">
-                      {item}
+                {[{label:'Contact-us',href:'/#contact'},].map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href} className="text-[#929292] text-[14px] hover:text-[#0095da] transition-colors">
+                      {item.label}
                     </Link>
                   </li>
                 ))}
