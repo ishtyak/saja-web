@@ -24,7 +24,7 @@ export default function ResourcesPage() {
       setLoading(true);
 
       const payload = {
-        request_type: "download_booklet",
+        // request_type: "download_booklet",
         name: name,
         email: email,
       };
