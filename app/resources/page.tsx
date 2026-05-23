@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ResourcesPage() {
   const [agreed, setAgreed] = useState(false);
@@ -134,12 +135,12 @@ export default function ResourcesPage() {
 
             <p className="text-[16px] text-[#494949] mb-8">
               For more information please review our{" "}
-              <a
-                href="#"
+              <Link
+                href="/privacy-policy"
                 className="text-[#0095da] hover:underline"
               >
                 Privacy Policy
-              </a>
+              </Link>
               .
             </p>
 

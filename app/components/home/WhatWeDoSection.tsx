@@ -89,6 +89,10 @@ export default function WhatWeDoSection() {
   return (
     <section className="w-full bg-white">
       {/* Design */}
+      <div id="features" className="w-full bg-[#FDBD07] ">
+        <p className="text-center text-white text-[45px] font-bold">What we do?</p>
+        <p className="text-center text-black text-[40px] font-bold ">Design. Collect. Analyse. All in one platform.</p>
+      </div>
       <div className="max-w-360 mx-auto px-8 lg:px-20 py-20">
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           <div className="flex-1">

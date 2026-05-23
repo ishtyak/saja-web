@@ -25,7 +25,7 @@ const individualPlans = [
     highlight: false,
     users: "1 user",
     responses: "200 responses per year",
-    features: ["Unlimited Surveys", "Max 10 questions per survey", "Email Support"],
+    features: ["Unlimited Surveys", "Max 10 questions per survey","NPS", "Email Support"],
   },
   {
     id: "standard",
@@ -303,15 +303,15 @@ function CellValue({ val }: { val: boolean | string | number }) {
 
 function PlanCards({ plans, onPlanSelect, selectedPlanId }: { plans: any[]; onPlanSelect: (planId: string) => void; selectedPlanId: string | null }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div className={`grid grid-cols-1  ${plans.length > 2 ? 'md:grid-cols-3' : 'md:grid-cols-2'} gap-6 mb-12`}>
       {plans.map((plan) => (
         <div
           key={plan.id}
           className={`relative rounded-2xl border p-8 flex flex-col items-center text-center transition-all duration-300 cursor-pointer ${selectedPlanId === plan.id
-              ? "border-[#0095da] bg-gradient-to-b from-[#e8f4fc] to-white shadow-2xl ring-2 ring-[#0095da] ring-opacity-50"
-              : plan.highlight && !selectedPlanId
-                ? "border-[#0095da] bg-gradient-to-b from-[#f0f8ff] to-white shadow-xl md:scale-105 z-10"
-                : "border-gray-200 bg-white hover:shadow-lg hover:border-[#0095da]/50"
+            ? "border-[#0095da] bg-[linear-gradient(180deg,#f7e7b2_0%,#d7e8e8_40%,#84cef7_100%)] shadow-2xl ring-2 ring-[#0095da] ring-opacity-50"
+            : plan.highlight && !selectedPlanId
+              ? "border-[#FDBD07] bg-white shadow-xl md:scale-105 z-10"
+              : "border-gray-200 bg-white hover:shadow-lg hover:border-[#0095da]/50"
             }`}
           onClick={() => onPlanSelect(plan.id)}
         >
@@ -325,7 +325,7 @@ function PlanCards({ plans, onPlanSelect, selectedPlanId }: { plans: any[]; onPl
             </div>
           ) : null}
 
-          {selectedPlanId === plan.id && (
+          {/* {selectedPlanId === plan.id && (
             <div className="absolute top-3 right-3">
               <div className="bg-[#0095da] rounded-full p-1">
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -333,7 +333,7 @@ function PlanCards({ plans, onPlanSelect, selectedPlanId }: { plans: any[]; onPl
                 </svg>
               </div>
             </div>
-          )}
+          )} */}
 
           <h3 className="text-[20px] font-bold text-black mb-2">{plan.name}</h3>
           <div className="flex items-end gap-1 mb-1">
@@ -343,15 +343,18 @@ function PlanCards({ plans, onPlanSelect, selectedPlanId }: { plans: any[]; onPl
           <p className="text-[14px] text-[#494949] mb-2">👥 {plan.users}</p>
           <p className="text-[14px] text-[#494949] mb-6">{plan.sub}</p>
           <button
+          style={{
+            padding:"5px 40px"
+          }}
             onClick={(e) => {
               e.stopPropagation();
               onPlanSelect(plan.id);
             }}
-            className={`w-full py-3 rounded-full font-semibold transition-all duration-200 mb-6 ${selectedPlanId === plan.id
-                ? "bg-[#0095da] text-white shadow-md ring-2 ring-[#0095da] ring-offset-1"
-                : plan.highlight
-                  ? "bg-[#0095da] text-white hover:bg-[#0077b3] shadow-md"
-                  : "bg-gray-100 text-[#0095da] hover:bg-[#0095da]/10 border border-transparent hover:border-[#0095da]"
+            className={`btn-primary text-center py-3 rounded-full font-semibold transition-all duration-200 mb-6 ${selectedPlanId === plan.id
+              ? "bg-[#0095da] text-white shadow-md ring-2 ring-[#0095da] ring-offset-1"
+              : plan.highlight
+                ? "bg-[#0095da] text-white hover:bg-[#0077b3] shadow-md"
+                : "bg-gray-100 text-[#0095da] hover:bg-[#0095da]/10 border border-transparent hover:border-[#0095da]"
               }`}
           >
             {selectedPlanId === plan.id ? "✓ SELECTED" : plan.ctaLabel}
@@ -489,7 +492,9 @@ function TeamsTab() {
 
   return (
     <div>
-      <PlanCards plans={teamsPlans} onPlanSelect={setSelectedPlanId} selectedPlanId={selectedPlanId} />
+      <div className="w-full flex justify-center">
+        <PlanCards plans={teamsPlans} onPlanSelect={setSelectedPlanId} selectedPlanId={selectedPlanId} />
+      </div>
 
       <div className="text-center py-8">
         <p className="text-[16px] text-[#494949] mb-4">Dive deeper into what you get with each plan</p>
@@ -731,8 +736,8 @@ export default function PricingPage() {
               key={tab}
               onClick={() => setActiveTab(tab)}
               className={`flex-1 py-3 text-[18px] font-medium transition-colors ${activeTab === tab
-                  ? "text-[#0095da] border-b-2 border-[#0095da]"
-                  : "text-[#494949] hover:text-[#0095da]"
+                ? "text-[#0095da] border-b-2 border-[#0095da]"
+                : "text-[#494949] hover:text-[#0095da]"
                 }`}
             >
               {tab}

@@ -62,7 +62,7 @@ export default function AboutPage() {
           </div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 pb-20 ">
+        {/* <div className="max-w-7xl mx-auto px-6 lg:px-10 pb-20 ">
           <div className="max-w-6xl">
             <h2 className="text-[36px] text-[#0095da] mb-10">
               Why Businesses Choose Saja
@@ -139,7 +139,7 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

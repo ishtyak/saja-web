@@ -18,35 +18,37 @@ export default function Navbar() {
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
-      <div className="max-w-360 mx-auto px-8 lg:px-16 h-20 flex items-center justify-between">
+      <div className="max-w-360 mx-auto px-8 lg:px-16 h-[12vh] flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 shrink-0">
-          <Image
-            src="/saja-logo.png"
-            alt="Saja Logo"
-            width={100}
-            height={60}
-            style={{ height: "auto" }}
-            priority
-          />
-        </Link>
+        <div className="flex gap-10">
+          <Link href="/" className="flex items-center gap-2 shrink-0">
+            <Image
+              src="/saja-logo.png"
+              alt="Saja Logo"
+              width={100}
+              height={60}
+              style={{ height: "auto" }}
+              priority
+            />
+          </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => {
-            const isActive = pathname === link.href;
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`text-[16px] font-medium transition-colors ${isActive ? "text-[#0095da]" : "text-[#494949] hover:text-[#0095da]"
-                  }`}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
-        </nav>
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-[16px] font-medium transition-colors ${isActive ? "text-[#0095da]" : "text-[#494949] hover:text-[#0095da]"
+                    }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </nav>
+        </div>
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4">
@@ -109,7 +111,7 @@ export default function Navbar() {
             <Link href="https://insights.saja.biz/login" target="_blank" className="w-1/2 border rounded-full py-1 px-3 text-center">
               Login
             </Link>
-            <Link href="https://insights.saja.biz/signup" target="_blank" style={{padding:"5px 0px",width:"50%"}} className="btn-primary justify-center text-center">
+            <Link href="https://insights.saja.biz/signup" target="_blank" style={{ padding: "5px 0px", width: "50%" }} className="btn-primary justify-center text-center">
               Get Started
             </Link>
           </div>
