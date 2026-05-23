@@ -310,7 +310,7 @@ function PlanCards({ plans, onPlanSelect, selectedPlanId }: { plans: any[]; onPl
           className={`relative rounded-2xl border p-8 flex flex-col items-center text-center transition-all duration-300 cursor-pointer ${selectedPlanId === plan.id
             ? "border-[#0095da] bg-[linear-gradient(180deg,#f7e7b2_0%,#d7e8e8_40%,#84cef7_100%)] shadow-2xl ring-2 ring-[#0095da] ring-opacity-50"
             : plan.highlight && !selectedPlanId
-              ? "border-[#FDBD07] bg-white shadow-xl md:scale-105 z-10"
+              ? " bg-white shadow-xl md:scale-105 z-10"
               : "border-gray-200 bg-white hover:shadow-lg hover:border-[#0095da]/50"
             }`}
           onClick={() => onPlanSelect(plan.id)}
