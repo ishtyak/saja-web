@@ -93,7 +93,9 @@ export default function WhatWeDoSection() {
         <p className="text-center text-white text-[45px] font-bold">What we do?</p>
         <p className="text-center text-black text-[40px] font-bold ">Design. Collect. Analyse. All in one platform.</p>
       </div>
-      <div className="max-w-360 mx-auto px-8 lg:px-20 py-20">
+
+      <div className="max-w-360 mx-auto px-8 lg:px-20 py-20 sm:flex">
+        <div className="sm:w-2/5"><button className="bg-[#FDBD07] text-[24px] fond-bold py-1 px-5 rounded-full">Design</button></div>
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           <div className="flex-1">
             <h2 className="text-[36px] font-bold text-black mb-2">Design surveys your way</h2>
@@ -105,10 +107,10 @@ export default function WhatWeDoSection() {
             <Link href="#" className="text-[18px] text-[#0095da] font-medium hover:underline mb-2 inline-block">
               Start Designing →
             </Link>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 mt-4">
+            <div className="grid grid-cols-1  gap-x-12 gap-y-6 mt-4">
               {designFeatures.map((f) => (
                 <div key={f.title}>
-                  <p className="text-[14px] font-medium text-[#1a191e] mb-1">{f.title}</p>
+                  <p className="text-[18px] font-bold text-[#1a191e] mb-1">{f.title}</p>
                   <p className="text-[14px] text-[#727b84]">{f.description}</p>
                 </div>
               ))}
@@ -120,9 +122,10 @@ export default function WhatWeDoSection() {
       <div className="border-t border-gray-100" />
 
       {/* Collect */}
-      <div className="max-w-360 mx-auto px-8 lg:px-20 pb-20">
-        <div className="flex flex-col lg:flex-row gap-12 items-start">
-          <div className="flex-1">
+      <div className="max-w-360 mx-auto px-8 lg:px-20 pb-20 sm:flex">
+        <div className="sm:w-2/5"><button className="bg-[#FDBD07] text-[24px] fond-bold  py-1 px-5 rounded-full">Collect</button></div>
+        <div className="flex flex-col gap-12 items-start">
+          <div className="flex flex-col">
             <h2 className="text-[36px] font-bold text-black mb-2">Collect Data from Users, easily</h2>
             <p className="text-[18px] text-[#494949] mb-2">
               Reach respondents where they are. Share surveys through flexible channels while keeping responses secure and organized.
@@ -130,7 +133,7 @@ export default function WhatWeDoSection() {
             <Link href="#" className="text-[22px] text-[#0095da] font-medium hover:underline mb-8 inline-block">
               Collect →
             </Link>
-            <ul className="flex flex-col gap-3 ">
+            <ul className="grid grid-cols-1  gap-x-12 gap-y-6 mt-4">
               {collectFeatures.map((f) => (
                 <li key={f.title} className="flex items-start gap-3">
                   <CheckIcon />
@@ -147,13 +150,15 @@ export default function WhatWeDoSection() {
             </ul>
             <Image src={'/figma-refs/collect.png'} alt="Collect" height={400} width={600}></Image>
           </div>
+
         </div>
       </div>
 
       <div className="border-t border-gray-100" />
 
       {/* Analyse */}
-      <div className="max-w-360 mx-auto px-8 lg:px-20 pb-20">
+      <div className="max-w-360 mx-auto px-8 lg:px-20 pb-20 sm:flex">
+        <div className="sm:w-2/5"><button className="bg-[#FDBD07] text-[24px] fond-bold  py-1 px-5 rounded-full">Analyse</button></div>
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           <div className="flex-1">
             <h2 className="text-[36px] font-bold text-black mb-2">Understand Feedback Instantly</h2>
@@ -163,10 +168,10 @@ export default function WhatWeDoSection() {
             <Link href="#" className="text-[18px] text-[#0095da] font-medium hover:underline mb-6 inline-block">
               Begin Analyzing →
             </Link>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+            <div className="grid grid-cols-1  gap-x-12 gap-y-6">
               {analyseFeatures.map((f) => (
                 <div key={f.title}>
-                  <p className="text-[14px] font-medium text-[#1a191e] mb-1">{f.title}</p>
+                  <p className="text-[18px] font-bold text-[#1a191e] mb-1">{f.title}</p>
                   <p className="text-[14px] text-[#727b84]">{f.description}</p>
                 </div>
               ))}

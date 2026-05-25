@@ -27,16 +27,16 @@ export default function IndustriesSection() {
   return (
     <section className="w-full bg-white py-20">
       <div className="max-w-360 mx-auto px-8 lg:px-16">
-        <h2 className="text-[36px] font-bold text-[#0095da] text-center mb-4">
+        <h2 className="text-[56px] font-bold text-[#0095da] text-center mb-4">
           Feedback solutions for every industry
         </h2>
 
-        <p className="text-[16px] text-[#494949] text-center max-w-3xl mx-auto mb-16">
+        <p className="text-[24px] text-[#494949] text-center max-w-3xl mx-auto mb-16">
           Saja adapts to how different organizations ask questions and act on
           answers. Fast or deep, anonymous or tracked.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="sm:flex justify-center gap-3">
           {industries.map((ind) => {
             const Icon = ind.icon;
 
@@ -50,7 +50,7 @@ export default function IndustriesSection() {
                   <Image src={`/figma-refs/${Icon}`} alt={Icon} height={50} width={50} ></Image>
                 </div>
 
-                <h3 className="text-[16px] font-semibold text-black mb-3">
+                <h3 className="text-[20px] font-bold text-black mb-3">
                   {ind.name}
                 </h3>
 
@@ -63,17 +63,17 @@ export default function IndustriesSection() {
         </div>
 
         {/* CTA Banner */}
-        <div className="bg-[#f5a623] rounded-2xl flex items-center justify-center py-2  px-10 text-center">
-          <p className="text-[36px] font-bold text-center text-black ">
+        <div className="bg-[#f5a623] rounded-2xl flex flex-col items-center justify-center py-6  px-10 text-center mt-10">
+          <p className="text-[40px] font-bold text-center text-black ">
             Want a quick demo for your industry?
           </p>
 
-          {/* <Link
+          <Link
             href="#contact"
             className="btn-primary inline-flex items-center justify-center rounded-full bg-[#0095da] px-4 py-2 text-[18px] font-bold text-white hover:opacity-90 transition"
           >
             Book a Demo
-          </Link> */}
+          </Link>
         </div>
       </div>
     </section>

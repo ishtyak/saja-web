@@ -359,7 +359,7 @@ function PlanCards({ plans, onPlanSelect, selectedPlanId }: { plans: any[]; onPl
           >
             {selectedPlanId === plan.id ? "✓ SELECTED" : plan.ctaLabel}
           </button>
-          <p className="text-[16px] text-[#0095da] font-medium mb-4">📊 {plan.responses}</p>
+          <p className="text-[16px] text-[#0095da] font-medium mb-4">{plan.responses}</p>
           <ul className="flex flex-col gap-2 w-full">
             {plan.features.map((f: string) => (
               <li key={f} className="flex items-center gap-2 text-[15px] text-[#494949]">
@@ -616,7 +616,7 @@ function MarketResearchTab() {
           </div>
           <div className="mb-6"><label className="block text-[16px] font-semibold text-black mb-2">Leave us your message here</label><textarea name="message" value={formData.message} onChange={handleChange} placeholder="Write us your request here" rows={3} className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da] resize-none" required /></div>
           <div className="mb-8"><label className="flex items-center gap-3 cursor-pointer"><input type="checkbox" checked={agreed} onChange={(e) => setAgreed(e.target.checked)} className="w-5 h-5 text-[#0095da] rounded" /><span className="text-[14px] text-[#494949]">I agree to the processing of my personal data and consent to be contacted by Saja.</span></label></div>
-          <button type="submit" disabled={loading} className="w-full md:w-auto px-8 py-3 bg-[#0095da] text-white font-semibold rounded-full hover:bg-[#0077b3] disabled:opacity-50">{loading ? "SENDING..." : "Contact Us"}</button>
+          <button type="submit" disabled={loading} className="btn-primary px-8 py-3 bg-[#0095da] text-white font-semibold rounded-full hover:bg-[#0077b3] disabled:opacity-50">{loading ? "SENDING..." : "Contact Us"}</button>
         </form>
       </div>
 
@@ -685,7 +685,7 @@ function EnterpriseTab() {
           </div>
           <div className="mb-6"><label className="block text-[16px] font-semibold text-black mb-2">Leave us your message here</label><textarea name="message" value={formData.message} onChange={handleChange} placeholder="Write us your request here" rows={3} className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da] resize-none" required /></div>
           <div className="mb-8"><label className="flex items-center gap-3 cursor-pointer"><input type="checkbox" checked={agreed} onChange={(e) => setAgreed(e.target.checked)} className="w-5 h-5 text-[#0095da] rounded" /><span className="text-[14px] text-[#494949]">I agree to the processing of my personal data and consent to be contacted by Saja.</span></label></div>
-          <button type="submit" disabled={loading} className="w-full md:w-auto px-8 py-3 bg-[#0095da] text-white font-semibold rounded-full hover:bg-[#0077b3] disabled:opacity-50">{loading ? "SENDING..." : "Contact Us"}</button>
+          <button type="submit" disabled={loading} className="btn-primary px-8 py-3 bg-[#0095da] text-white font-semibold rounded-full hover:bg-[#0077b3] disabled:opacity-50">{loading ? "SENDING..." : "Contact Us"}</button>
         </form>
       </div>
 

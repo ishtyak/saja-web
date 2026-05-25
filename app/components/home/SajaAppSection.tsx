@@ -3,22 +3,27 @@ import Link from "next/link";
 
 const appFeatures = [
   {
+    icn: "/figma-refs/int-acc.png",
     title: "Interviewer Access",
     description: "Generate secure login credentials for field teams.",
   },
   {
+    icn: "/figma-refs/app-bas.png",
     title: "App-Based Surveys",
     description: "Assigned surveys appear automatically after login.",
   },
   {
+    icn: "/figma-refs/onl-ofl.png",
     title: "Online & Offline Mode",
     description: "Collect responses without internet. Sync later.",
   },
   {
+    icn: "/figma-refs/fie-kio.png",
     title: "Field & Kiosk Ready",
     description: "Perfect for in-person interviews and on-site feedback.",
   },
   {
+    icn: "/figma-refs/con-per.png",
     title: "Controlled Permissions",
     description: "Interviewers can record responses only, no edits.",
   },
@@ -39,21 +44,22 @@ export default function SajaAppSection() {
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           {/* Text content */}
           <div className="flex-1">
-            <h2 className="text-[36px]  text-[#0095da] mb-4">
+            <h2 className="text-[50px] font-bold text-[#0095da] mb-4">
               Saja App for Offline Data Collection
             </h2>
-            <p className="text-[18px] text-[#494949] mb-5">
+            <p className="text-[24px] text-[#494949] mb-5">
               Empower your teams to capture real-world feedback anywhere.
             </p>
-            <Link href="/get-started" className="text-[18px] text-[#0095da] font-medium hover:underline">
+            <Link href="/get-started" className="text-[22px] text-[#0095da] font-medium hover:underline">
               Get Started with App →
             </Link>
             <ul className="flex flex-col gap-5 mt-8">
               {appFeatures.map((f) => (
                 <li key={f.title} className="flex gap-4">
-                  <CheckIcon />
+                  {/* <CheckIcon /> */}
+                  <Image src={f.icn} alt={f.icn} height={20} width={50} ></Image>
                   <div>
-                    <p className="text-[16px] font-medium text-[#1a191e]">{f.title}</p>
+                    <p className="text-[20px] font-bold text-[#1a191e]">{f.title}</p>
                     <p className="text-[16px] text-[#727b84]">{f.description}</p>
                   </div>
                 </li>

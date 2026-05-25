@@ -25,24 +25,34 @@ export default function AISection() {
   return (
     <section className="w-full bg-[#f0f8ff] py-20">
       <div className="max-w-360 mx-auto px-8 lg:px-16">
-        <h2 className="text-[36px] font-bold text-[#0095da] text-center mb-4">
+        <h2 className="text-[56px] font-bold text-[#0095da] text-center mb-4">
           AI That Works Where You Need It
         </h2>
-        <p className="text-[18px] text-[#494949] text-center max-w-3xl mx-auto mb-16">
+        <p className="text-[24px] text-[#494949] text-center max-w-3xl mx-auto mb-16">
           AI-powered assistance at every stage, from building your survey to understanding what your customers truly mean.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 gap-x-0 justify-items-center">
-          {aiFeatures.map((f) => (
-            <div
-              key={f.title}
-              className="bg-white rounded-2xl opacity-70 bg-linear-to-b  from-[#FDDF7E] to-[#0095DA] max-w-80 p-8 shadow-sm border border-gray-100"
-            >
-              <h3 className="text-[18px] text-black mb-3">{f.title}</h3>
-              <p className="text-[14px] text-[#494949]">{f.description}</p>
-            </div>
-          ))}
+        {/* <div> */}
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-2 justify-items-center w-2/3">
+            {aiFeatures.map((f) => (
+              <div
+                key={f.title}
+                className="w-full max-w-[420px] min-h-[220px] rounded-2xl p-6 md:p-7 shadow-sm border border-gray-100
+                      opacity-90 bg-gradient-to-b from-[#FDDF7E] to-[#0095DA] flex flex-col justify-start"
+              >
+                <h3 className="text-[24px] font-semibold text-black mb-3">
+                  {f.title}
+                </h3>
+
+                <p className="text-[17px] leading-7 text-[#494949]">
+                  {f.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
+        {/* </div> */}
       </div>
     </section>
   );

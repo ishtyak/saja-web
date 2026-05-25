@@ -77,18 +77,18 @@ export default function ResourcesPage() {
 
           {/* Form */}
           <div className="flex-1 sm:w-1/2">
-            <h1 className="text-[36px] font-bold text-black mb-4">
+            <h1 className="text-[50px] font-bold text-black mb-4">
               The Art &amp; Science of Memorable Customer Experience
             </h1>
 
-            <p className="text-[18px] text-[#494949] mb-8">
+            <p className="text-[24px] text-[#494949] mb-8">
               Discover how to turn feedback into meaningful action that improves
               satisfaction, loyalty, and growth.
             </p>
 
             <div className="flex flex-col gap-6 mb-6">
               <div>
-                <label className="block text-[16px] font-medium text-black mb-2">
+                <label className="block text-[22px] font-medium text-black mb-2">
                   Name
                 </label>
 
@@ -102,7 +102,7 @@ export default function ResourcesPage() {
               </div>
 
               <div>
-                <label className="block text-[16px] font-medium text-black mb-2">
+                <label className="block text-[22px] font-medium text-black mb-2">
                   Email ID
                 </label>
 
@@ -127,7 +127,7 @@ export default function ResourcesPage() {
 
               <label
                 htmlFor="resources-consent"
-                className="text-[16px] text-black"
+                className="text-[22px] text-black"
               >
                 I give Saja permission to contact me
               </label>

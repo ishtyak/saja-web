@@ -1,3 +1,4 @@
+import { CircleCheck } from "lucide-react";
 import Image from "next/image";
 
 const securityFeatures = [
@@ -39,14 +40,15 @@ export default function SecuritySection() {
 
           {/* Right: features */}
           <div>
-            <h2 className="text-[36px] font-bold text-black mb-10">Security &amp; Compliance</h2>
-            <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+            <h2 className="text-[50px] font-bold text-black mb-10">Security &amp; Compliance</h2>
+            <div className="flex-1 grid grid-cols-1  gap-x-12 gap-y-8">
 
               {securityFeatures.map((f) => (
                 <div key={f.title} className="flex gap-4">
-                  <ShieldIcon />
+                  {/* <ShieldIcon /> */}
+                  <CircleCheck fill="#0095DA" color="white" />
                   <div>
-                    <p className="text-[16px] font-medium text-[#1a191e] mb-1">{f.title}</p>
+                    <p className="text-[20px] font-bold text-[#1a191e] mb-1">{f.title}</p>
                     <p className="text-[16px] text-[#727b84]">{f.description}</p>
                   </div>
                 </div>
