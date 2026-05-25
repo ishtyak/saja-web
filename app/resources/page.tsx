@@ -77,11 +77,11 @@ export default function ResourcesPage() {
 
           {/* Form */}
           <div className="flex-1 sm:w-1/2">
-            <h1 className="text-[50px] font-bold text-black mb-4">
+            <h1 className="wwd-title text-black mb-4">
               The Art &amp; Science of Memorable Customer Experience
             </h1>
 
-            <p className="text-[24px] text-[#494949] mb-8">
+            <p className="wwd-desc text-[#494949] mb-8">
               Discover how to turn feedback into meaningful action that improves
               satisfaction, loyalty, and growth.
             </p>

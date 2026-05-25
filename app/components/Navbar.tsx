@@ -40,7 +40,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-[20px] font-medium transition-colors ${isActive ? "text-[#0095da]" : "text-[#494949] hover:text-[#0095da]"
+                  className={`nav-button font-medium transition-colors ${isActive ? "text-[#0095da]" : "text-[#494949] hover:text-[#0095da]"
                     }`}
                 >
                   {link.label}
@@ -52,7 +52,7 @@ export default function Navbar() {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4">
-          <Link href={"/#contact"} className="flex items-center gap-2 text-[#494949] text-[20px] font-medium hover:text-[#0095da] transition-colors">
+          <Link href={"/#contact"} className="nav-button flex items-center gap-2 text-[#494949] font-medium hover:text-[#0095da] transition-colors">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="12" cy="12" r="10" />
               <line x1="2" y1="12" x2="22" y2="12" />
@@ -62,12 +62,12 @@ export default function Navbar() {
           </Link>
           <Link
             href="https://insights.saja.biz/login"
-            className="text-[20px] border border-gray-300 rounded-full px-6 py-1 hover:border-[#0095da] hover:text-[#0095da] transition-colors"
+            className="nav-button border border-gray-300 rounded-full px-6 py-1 hover:border-[#0095da] hover:text-[#0095da] transition-colors"
           >
             Login
           </Link>
           <Link href="https://insights.saja.biz/signup" className="relative inline-flex items-center">
-            <button className="btn-primary text-[20px]">
+            <button className="btn-primary nav-button">
               Get Started
             </button>
           </Link>

@@ -40,17 +40,17 @@ function CheckIcon() {
 export default function SajaAppSection() {
   return (
     <section className="w-full pt-5 pb-20">
-      <div className="max-w-360 mx-auto px-16 lg:px-30">
+      <div className="mx-auto px-16 lg:px-30">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           {/* Text content */}
           <div className="flex-1">
-            <h2 className="text-[50px] font-bold text-[#0095da] mb-4">
+            <h2 className="heading font-bold text-[#0095da] mb-4">
               Saja App for Offline Data Collection
             </h2>
-            <p className="text-[24px] text-[#494949] mb-5">
+            <p className="h-desc text-[#494949] mb-5">
               Empower your teams to capture real-world feedback anywhere.
             </p>
-            <Link href="/get-started" className="text-[22px] text-[#0095da] font-medium hover:underline">
+            <Link href="/get-started" className="wwd-link text-[#0095DA] font-medium hover:underline">
               Get Started with App →
             </Link>
             <ul className="flex flex-col gap-5 mt-8">
@@ -59,8 +59,8 @@ export default function SajaAppSection() {
                   {/* <CheckIcon /> */}
                   <Image src={f.icn} alt={f.icn} height={20} width={50} ></Image>
                   <div>
-                    <p className="text-[20px] font-bold text-[#1a191e]">{f.title}</p>
-                    <p className="text-[16px] text-[#727b84]">{f.description}</p>
+                    <p className="wwd-f-title font-bold text-[#1a191e]">{f.title}</p>
+                    <p className="wwd-f-desc text-[#727b84]">{f.description}</p>
                   </div>
                 </li>
               ))}
@@ -68,7 +68,7 @@ export default function SajaAppSection() {
           </div>
 
           {/* App mockup placeholder */}
-          <div className="lg:w-87.5 shrink-0 bg-transparent flex justify-center">
+          <div className=" shrink-0 bg-transparent flex justify-center">
             <div className="w-72 h-120 rounded-[40px]  flex flex-col overflow-hidden">
               <div className="flex-1 p-4 flex flex-col gap-3">
                 {/* <Image src={'/figma-refs/s-app-1.png'} alt="s-app" height={600} width={200}></Image> */}

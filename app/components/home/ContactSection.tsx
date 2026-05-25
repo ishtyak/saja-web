@@ -101,17 +101,17 @@ export default function ContactSection() {
   return (
     <section id="contact" className="w-full  py-20">
       <div className="flex flex-col text-center justify-center items-center">
-        <h2 className="text-[50px] font-bold text-black mb-4">
+        <h2 className="wwd-title text-black mb-4">
           Get in touch with Saja
         </h2>
-        <p className="text-[24px] text-[#494949]  mb-6 max-w-3xl">
+        <p className="wwd-desc text-[#494949]  mb-6 max-w-3xl">
           Whether you're looking to run smarter surveys, explore CX use
           cases, or just understand if Saja is right for you, we're here to
           help.
         </p>
       </div>
 
-      <div className="max-w-360 mx-auto px-8 lg:px-16 py-10 bg-linear-to-b from-[#FDDF7E] to-[#0095DA]">
+      <div className="max-w-360 mx-auto px-8 lg:px-16 py-10 ">
         <div className="flex  flex-col lg:flex-row gap-16 items-start">
 
           {/* Left */}
@@ -253,7 +253,7 @@ export default function ContactSection() {
             <button
               onClick={sendQuery}
               disabled={loading}
-              className="btn-second text-[24px] font-semibold justify-center"
+              className="btn-second button justify-center"
             >
               {loading ? "Submitting..." : "Connect with Saja"}
             </button>

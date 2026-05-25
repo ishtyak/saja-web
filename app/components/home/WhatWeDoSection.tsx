@@ -89,29 +89,31 @@ export default function WhatWeDoSection() {
   return (
     <section className="w-full bg-white">
       {/* Design */}
-      <div id="features" className="w-full bg-[#FDBD07] ">
-        <p className="text-center text-white text-[45px] font-bold">What we do?</p>
-        <p className="text-center text-black text-[40px] font-bold ">Design. Collect. Analyse. All in one platform.</p>
+      <div id="features" className="w-full bg-[#FDBD07] h-41 md:h-45 lg:h-49 xl:53.75 flex items-center justify-center ">
+        <div>
+          <p className="strip-title text-center text-white ">What we do?</p>
+          <p className="strip-desc text-center text-black ">Design. Collect. Analyse. All in one platform.</p>
+        </div>
       </div>
 
       <div className="max-w-360 mx-auto px-8 lg:px-20 py-20 sm:flex">
-        <div className="sm:w-2/5"><button className="bg-[#FDBD07] text-[24px] fond-bold py-1 px-5 rounded-full">Design</button></div>
+        <div className="sm:w-2/5"><button className="wwd-button py-1 px-5 rounded-full">Design</button></div>
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           <div className="flex-1">
-            <h2 className="text-[36px] font-bold text-black mb-2">Design surveys your way</h2>
+            <h2 className="wwd-title text-black mb-2">Design surveys your way</h2>
             <div className="">
-              <p className="my-4 text-[16px] ">
+              <p className="wwd-desc my-4 ">
                 Start from a blank canvas, use AI or upload your Questionnaire, all your choice. Customize every element without compromising speed or structure.
               </p>
             </div>
-            <Link href="#" className="text-[18px] text-[#0095da] font-medium hover:underline mb-2 inline-block">
+            <Link href="#" className="wwd-link text-[#0095da] hover:underline mb-2 inline-block">
               Start Designing →
             </Link>
             <div className="grid grid-cols-1  gap-x-12 gap-y-6 mt-4">
               {designFeatures.map((f) => (
                 <div key={f.title}>
-                  <p className="text-[18px] font-bold text-[#1a191e] mb-1">{f.title}</p>
-                  <p className="text-[14px] text-[#727b84]">{f.description}</p>
+                  <p className="wwd-f-title text-[#1a191e] mb-1">{f.title}</p>
+                  <p className="wwd-f-desc text-[#727b84]">{f.description}</p>
                 </div>
               ))}
             </div>
@@ -123,21 +125,21 @@ export default function WhatWeDoSection() {
 
       {/* Collect */}
       <div className="max-w-360 mx-auto px-8 lg:px-20 pb-20 sm:flex">
-        <div className="sm:w-2/5"><button className="bg-[#FDBD07] text-[24px] fond-bold  py-1 px-5 rounded-full">Collect</button></div>
+        <div className="sm:w-2/5"><button className="wwd-button py-1 px-5 rounded-full">Collect</button></div>
         <div className="flex flex-col gap-12 items-start">
           <div className="flex flex-col">
-            <h2 className="text-[36px] font-bold text-black mb-2">Collect Data from Users, easily</h2>
-            <p className="text-[18px] text-[#494949] mb-2">
+            <h2 className="wwd-title text-black mb-2">Collect Data from Users, easily</h2>
+            <p className="wwd-desc text-[#494949] mb-2">
               Reach respondents where they are. Share surveys through flexible channels while keeping responses secure and organized.
             </p>
-            <Link href="#" className="text-[22px] text-[#0095da] font-medium hover:underline mb-8 inline-block">
+            <Link href="#" className="wwd-link text-[#0095da] font-medium hover:underline mb-8 inline-block">
               Collect →
             </Link>
             <ul className="grid grid-cols-1  gap-x-12 gap-y-6 mt-4">
               {collectFeatures.map((f) => (
                 <li key={f.title} className="flex items-start gap-3">
                   <CheckIcon />
-                  <span className="text-[14px] text-[#494949]">{f.title}</span>
+                  <span className="wwd-f-title text-[#494949]">{f.title}</span>
                 </li>
               ))}
             </ul>
@@ -158,21 +160,21 @@ export default function WhatWeDoSection() {
 
       {/* Analyse */}
       <div className="max-w-360 mx-auto px-8 lg:px-20 pb-20 sm:flex">
-        <div className="sm:w-2/5"><button className="bg-[#FDBD07] text-[24px] fond-bold  py-1 px-5 rounded-full">Analyse</button></div>
+        <div className="sm:w-2/5"><button className="wwd-button  py-1 px-5 rounded-full">Analyse</button></div>
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           <div className="flex-1">
-            <h2 className="text-[36px] font-bold text-black mb-2">Understand Feedback Instantly</h2>
-            <p className="text-[18px] text-[#494949] mb-2">
+            <h2 className="wwd-title text-black mb-2">Understand Feedback Instantly</h2>
+            <p className="wwd-desc text-[#494949] mb-2">
               Visual dashboards update in real time, helping you spot trends, issues, and opportunities as feedback comes in.
             </p>
-            <Link href="#" className="text-[18px] text-[#0095da] font-medium hover:underline mb-6 inline-block">
+            <Link href="#" className="wwd-link text-[#0095da] font-medium hover:underline mb-6 inline-block">
               Begin Analyzing →
             </Link>
             <div className="grid grid-cols-1  gap-x-12 gap-y-6">
               {analyseFeatures.map((f) => (
                 <div key={f.title}>
-                  <p className="text-[18px] font-bold text-[#1a191e] mb-1">{f.title}</p>
-                  <p className="text-[14px] text-[#727b84]">{f.description}</p>
+                  <p className="wwd-f-title font-bold text-[#1a191e] mb-1">{f.title}</p>
+                  <p className="wwd-f-desc text-[#727b84]">{f.description}</p>
                 </div>
               ))}
             </div>

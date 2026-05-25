@@ -40,7 +40,7 @@ export default function SecuritySection() {
 
           {/* Right: features */}
           <div>
-            <h2 className="text-[50px] font-bold text-black mb-10">Security &amp; Compliance</h2>
+            <h2 className="wwd-title  font-bold text-black mb-10">Security &amp; Compliance</h2>
             <div className="flex-1 grid grid-cols-1  gap-x-12 gap-y-8">
 
               {securityFeatures.map((f) => (
@@ -48,8 +48,8 @@ export default function SecuritySection() {
                   {/* <ShieldIcon /> */}
                   <CircleCheck fill="#0095DA" color="white" />
                   <div>
-                    <p className="text-[20px] font-bold text-[#1a191e] mb-1">{f.title}</p>
-                    <p className="text-[16px] text-[#727b84]">{f.description}</p>
+                    <p className="wwd-f-title font-bold text-[#1a191e] mb-1">{f.title}</p>
+                    <p className="wwd-f-desc text-[#727b84]">{f.description}</p>
                   </div>
                 </div>
               ))}
