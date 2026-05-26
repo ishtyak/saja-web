@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <>
+    <div className="flex justify-center items-center h-[88vh] w-full mb-20">
       <div
-        className="mx-auto px-8 lg:px-16 bg-contain bg-center  h-120.75 my-20 bg-no-repeat"
+        className="mx-auto px-8 lg:px-16 bg-contain bg-center w-full  h-120.75 my-20 bg-no-repeat"
         style={{
           backgroundImage: "url('/figma-refs/abt-cont.png')",
         }}
@@ -108,6 +108,6 @@ export default function AboutPage() {
           </div>
         </div> */}
       </div>
-    </>
+    </div>
   );
 }

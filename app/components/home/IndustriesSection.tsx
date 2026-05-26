@@ -64,11 +64,10 @@ export default function IndustriesSection() {
 
         {/* CTA Banner */}
         <div className="bg-[#FDBD07] h-41 md:h-45 lg:h-49 xl:53.75 flex  items-center justify-center py-6  px-10 text-center mt-10">
-          <div className="flex flex-col gap-5 justify-center items-center">
+          <div className="flex flex-col gap-4 justify-center items-center">
             <p className="strip-title text-center text-black  ">
               Want a quick demo for your industry?
             </p>
-
             <Link
               href="#contact"
               className="w-fit inline-flex items-center justify-center rounded-full bg-[#0095da] px-4 py-2 text-[18px] font-bold text-white hover:opacity-90 transition"

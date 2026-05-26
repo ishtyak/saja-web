@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#E7E7E7] border-t border-gray-200">
+    <footer className="bg-[#E7E7E7] border-t h-108.5 border-gray-200">
       <div className="max-w-360 mx-auto px-8 lg:px-16 py-10">
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Logo & Tagline */}
           <div className="lg:w-1/2 shrink-0">
-            <Image src="/saja-logo.png" alt="Saja Logo" width={200} height={200} style={{ height: "auto" }} />
-            <p className="text-[#494949] text-[30px] font-bold mt-3">Ascend with Insights</p>
+            <Image src="/saja-logo.png" alt="Saja Logo" width={150} height={150} style={{ height: "auto" }} />
+            <p className="text-[#494949] sm:text-[18px] md:text[24px] lg:text-[30px] font-bold mt-3">Ascend with Insights</p>
           </div>
 
           {/* Links */}

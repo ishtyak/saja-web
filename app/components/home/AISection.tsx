@@ -41,11 +41,11 @@ export default function AISection() {
                 className="w-full max-w-[420px] min-h-[220px] rounded-2xl p-6 md:p-7 shadow-sm border border-gray-100
                      flex flex-col justify-start"
               >
-                <h3 className="h-desc font-semibold text-[#0095DA] mb-3">
+                <h3 className="wwd-f-title font-semibold text-[#0095DA] mb-3">
                   {f.title}
                 </h3>
 
-                <p className="text-[8px] md:text-[14px] lg:text-[16px] 2xl:text-[18px] leading-7 text-[#494949]">
+                <p className=" wwd-f-desc leading-7 text-[#494949]">
                   {f.description}
                 </p>
               </div>

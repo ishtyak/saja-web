@@ -16,8 +16,8 @@ export default function TeamsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 ">
-          <div className="sm:flex hidden sm:visible justify-center">
-            <Image src={'/figma-refs/bingo.png'} alt="bingo" height={200} width={400} ></Image>
+          <div className="sm:flex hidden sm:visible justify-center items-center">
+            <Image src={'/figma-refs/bingo.png'} alt="bingo" height={150} width={300} ></Image>
           </div>
           {/* Collaborator Card */}
           <div className="flex flex-col gap-16">

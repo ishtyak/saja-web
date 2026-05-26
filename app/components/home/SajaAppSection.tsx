@@ -44,10 +44,10 @@ export default function SajaAppSection() {
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           {/* Text content */}
           <div className="flex-1">
-            <h2 className="heading font-bold text-[#0095da] mb-4">
+            <h2 className="wwd-title  font-bold text-[#0095da] mb-4">
               Saja App for Offline Data Collection
             </h2>
-            <p className="h-desc text-[#494949] mb-5">
+            <p className="wwd-desc text-[#494949] mb-5">
               Empower your teams to capture real-world feedback anywhere.
             </p>
             <Link href="/get-started" className="wwd-link text-[#0095DA] font-medium hover:underline">

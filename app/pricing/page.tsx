@@ -25,7 +25,7 @@ const individualPlans = [
     highlight: false,
     users: "1 user",
     responses: "200 responses per year",
-    features: ["Unlimited Surveys", "Max 10 questions per survey","NPS", "Email Support"],
+    features: ["Unlimited Surveys", "Max 10 questions per survey", "NPS", "Email Support"],
   },
   {
     id: "standard",
@@ -57,10 +57,10 @@ const individualPlans = [
 const teamsPlans = [
   {
     id: "team-standard",
-    name: "Team Standard",
+    name: "Standard",
     price: "$20",
     priceLabel: "/ user/ month",
-    sub: "Minimum 3 users",
+    sub: "$240 billed annually",
     ctaLabel: "Choose Plan",
     highlight: true,
     users: "3+ users",
@@ -69,10 +69,10 @@ const teamsPlans = [
   },
   {
     id: "team-advantage",
-    name: "Team Advantage",
+    name: "Advantage",
     price: "$40",
     priceLabel: "/ user/ month",
-    sub: "Minimum 5 users",
+    sub: "$480 billed annually",
     ctaLabel: "Choose Plan",
     highlight: false,
     users: "5+ users",
@@ -303,19 +303,19 @@ function CellValue({ val }: { val: boolean | string | number }) {
 
 function PlanCards({ plans, onPlanSelect, selectedPlanId }: { plans: any[]; onPlanSelect: (planId: string) => void; selectedPlanId: string | null }) {
   return (
-    <div className={`grid grid-cols-1  ${plans.length > 2 ? 'md:grid-cols-3' : 'md:grid-cols-2'} gap-6 mb-12`}>
+    <div className={`grid grid-cols-1   ${plans.length > 2 ? 'md:grid-cols-3' : 'md:grid-cols-2'} gap-x-10 place-items-center gap-6 mb-12`}>
       {plans.map((plan) => (
         <div
           key={plan.id}
-          className={`relative rounded-2xl border p-8 flex flex-col items-center text-center transition-all duration-300 cursor-pointer ${selectedPlanId === plan.id
+          className={`w-64 py-2 relative rounded-2xl   flex flex-col items-center text-center transition-all duration-300 cursor-pointer ${selectedPlanId === plan.id
             ? "border-[#0095da] bg-[linear-gradient(180deg,#f7e7b2_0%,#d7e8e8_40%,#84cef7_100%)] shadow-2xl ring-2 ring-[#0095da] ring-opacity-50"
             : plan.highlight && !selectedPlanId
               ? " bg-white shadow-xl md:scale-105 z-10"
-              : "border-gray-200 bg-white hover:shadow-lg hover:border-[#0095da]/50"
+              : " bg-white hover:shadow-lg hover:border-[#0095da]/50"
             }`}
           onClick={() => onPlanSelect(plan.id)}
         >
-          {(plan.highlight && !selectedPlanId) || (selectedPlanId === plan.id && plan.highlight) ? (
+          {/* {(plan.highlight && !selectedPlanId) || (selectedPlanId === plan.id && plan.highlight) ? (
             <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#0095da] text-white text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap">
               MOST POPULAR
             </div>
@@ -323,7 +323,7 @@ function PlanCards({ plans, onPlanSelect, selectedPlanId }: { plans: any[]; onPl
             <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap">
               SELECTED
             </div>
-          ) : null}
+          ) : null} */}
 
           {/* {selectedPlanId === plan.id && (
             <div className="absolute top-3 right-3">
@@ -335,22 +335,22 @@ function PlanCards({ plans, onPlanSelect, selectedPlanId }: { plans: any[]; onPl
             </div>
           )} */}
 
-          <h3 className="text-[20px] font-bold text-black mb-2">{plan.name}</h3>
+          <h3 className="plan-t1 font-bold  text-black mb-2">{plan.name}</h3>
           <div className="flex items-end gap-1 mb-1">
-            <span className="text-[40px] font-bold text-black">{plan.price}</span>
-            {plan.priceLabel && <span className="text-[14px] text-[#494949] mb-2">{plan.priceLabel}</span>}
+            <p className="plan-t2 font-bold text-black">{plan.price}</p>
+            {plan.priceLabel && <span className="plan-t3 text-[#494949] mb-2">{plan.priceLabel}/{plan.users}</span>}
           </div>
-          <p className="text-[14px] text-[#494949] mb-2">👥 {plan.users}</p>
-          <p className="text-[14px] text-[#494949] mb-6">{plan.sub}</p>
+          {/* <p className="plan-t3 text-[#494949] mb-2">👥 {plan.users}</p>*/}
+          <p className="plan-t3 text-[#494949] mb-4">{plan.sub}</p>
           <button
-          style={{
-            padding:"5px 40px"
-          }}
+            style={{
+              padding: "5px 40px"
+            }}
             onClick={(e) => {
               e.stopPropagation();
               onPlanSelect(plan.id);
             }}
-            className={`btn-primary text-center py-3 rounded-full font-semibold transition-all duration-200 mb-6 ${selectedPlanId === plan.id
+            className={`btn-primary text-center py-3 rounded-full font-semibold transition-all duration-200 mb-4 ${selectedPlanId === plan.id
               ? "bg-[#0095da] text-white shadow-md ring-2 ring-[#0095da] ring-offset-1"
               : plan.highlight
                 ? "bg-[#0095da] text-white hover:bg-[#0077b3] shadow-md"
@@ -359,10 +359,10 @@ function PlanCards({ plans, onPlanSelect, selectedPlanId }: { plans: any[]; onPl
           >
             {selectedPlanId === plan.id ? "✓ SELECTED" : plan.ctaLabel}
           </button>
-          <p className="text-[16px] text-[#0095da] font-medium mb-4">{plan.responses}</p>
-          <ul className="flex flex-col gap-2 w-full">
+          <p className="plan-t3 text-[#0095da] font-medium mb-4">{plan.responses}</p>
+          <ul className="flex flex-col gap-2 w-fit justify-center r">
             {plan.features.map((f: string) => (
-              <li key={f} className="flex items-center gap-2 text-[15px] text-[#494949]">
+              <li key={f} className="plan-t3 flex items-center gap-2 text-[#494949]">
                 <CheckIcon />
                 {f}
               </li>
@@ -468,7 +468,7 @@ function IndividualTab() {
       <PlanCards plans={individualPlans} onPlanSelect={setSelectedPlanId} selectedPlanId={selectedPlanId} />
 
       <div className="text-center py-8">
-        <p className="text-[16px] text-[#494949] mb-4">Dive deeper into what you get with each plan</p>
+        <p className="text-[16px] text-[#494949] mb-12">Dive deeper into what you get with each plan</p>
         <button
           onClick={() => setShowFeatures(!showFeatures)}
           className="text-[18px] font-semibold text-[#0095da] flex items-center gap-2 mx-auto hover:underline"
@@ -608,14 +608,14 @@ function MarketResearchTab() {
 
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mb-8">
-            <div><label className="block text-[16px] font-semibold text-black mb-2">Name</label><input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="Enter your name" className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da]" required /></div>
-            <div><label className="block text-[16px] font-semibold text-black mb-2">Last Name</label><input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Enter your last name" className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da]" required /></div>
-            <div><label className="block text-[16px] font-semibold text-black mb-2">Business Email</label><input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Enter email id" className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da]" required /></div>
-            <div><label className="block text-[16px] font-semibold text-black mb-2">Country</label><select name="country" value={formData.country} onChange={handleChange} className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da] bg-transparent" required><option value="">Select Country</option><option>United States</option><option>United Kingdom</option><option>India</option><option>Canada</option><option>Australia</option><option>Germany</option><option>France</option><option>UAE</option></select></div>
-            <div className="md:col-span-2"><label className="block text-[16px] font-semibold text-black mb-2">Contact Number</label><input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Enter your contact number" className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da]" required /></div>
+            <div><label className="block font-medium text-black mb-2">Name</label><input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="Enter your name" className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da]" required /></div>
+            <div><label className="block font-medium text-black mb-2">Last Name</label><input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Enter your last name" className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da]" required /></div>
+            <div><label className="block font-medium text-black mb-2">Business Email</label><input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Enter email id" className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da]" required /></div>
+            <div><label className="block font-medium text-black mb-2">Country</label><select name="country" value={formData.country} onChange={handleChange} className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da] bg-transparent" required><option value="">Select Country</option><option>United States</option><option>United Kingdom</option><option>India</option><option>Canada</option><option>Australia</option><option>Germany</option><option>France</option><option>UAE</option></select></div>
+            <div className="md:col-span-2"><label className="block font-medium text-black mb-2">Contact Number</label><input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Enter your contact number" className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da]" required /></div>
           </div>
-          <div className="mb-6"><label className="block text-[16px] font-semibold text-black mb-2">Leave us your message here</label><textarea name="message" value={formData.message} onChange={handleChange} placeholder="Write us your request here" rows={3} className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da] resize-none" required /></div>
-          <div className="mb-8"><label className="flex items-center gap-3 cursor-pointer"><input type="checkbox" checked={agreed} onChange={(e) => setAgreed(e.target.checked)} className="w-5 h-5 text-[#0095da] rounded" /><span className="text-[14px] text-[#494949]">I agree to the processing of my personal data and consent to be contacted by Saja.</span></label></div>
+          <div className="mb-6"><label className="block font-medium text-black mb-2">Leave us your message here</label><textarea name="message" value={formData.message} onChange={handleChange} placeholder="Write us your request here" rows={3} className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da] resize-none" required /></div>
+          <div className="mb-8"><label className="flex items-center font-medium gap-3 cursor-pointer"><input type="checkbox" checked={agreed} onChange={(e) => setAgreed(e.target.checked)} className="w-5 h-5 text-[#0095da] rounded" /><span className="text-[14px] text-[#494949]">I agree to the processing of my personal data and consent to be contacted by Saja.</span></label></div>
           <button type="submit" disabled={loading} className="btn-primary px-8 py-3 bg-[#0095da] text-white font-semibold rounded-full hover:bg-[#0077b3] disabled:opacity-50">{loading ? "SENDING..." : "Contact Us"}</button>
         </form>
       </div>
@@ -677,14 +677,14 @@ function EnterpriseTab() {
 
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mb-8">
-            <div><label className="block text-[16px] font-semibold text-black mb-2">Name</label><input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="Enter your name" className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da]" required /></div>
-            <div><label className="block text-[16px] font-semibold text-black mb-2">Last Name</label><input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Enter your last name" className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da]" required /></div>
-            <div><label className="block text-[16px] font-semibold text-black mb-2">Business Email</label><input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Enter email id" className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da]" required /></div>
-            <div><label className="block text-[16px] font-semibold text-black mb-2">Country</label><select name="country" value={formData.country} onChange={handleChange} className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da] bg-transparent" required><option value="">Select Country</option><option>United States</option><option>United Kingdom</option><option>India</option><option>Canada</option><option>Australia</option><option>Germany</option><option>UAE</option></select></div>
-            <div className="md:col-span-2"><label className="block text-[16px] font-semibold text-black mb-2">Contact Number</label><input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Enter your contact number" className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da]" required /></div>
+            <div><label className="block font-medium  text-black mb-2">Name</label><input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="Enter your name" className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da]" required /></div>
+            <div><label className="block font-medium  text-black mb-2">Last Name</label><input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Enter your last name" className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da]" required /></div>
+            <div><label className="block font-medium  text-black mb-2">Business Email</label><input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Enter email id" className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da]" required /></div>
+            <div><label className="block font-medium  text-black mb-2">Country</label><select name="country" value={formData.country} onChange={handleChange} className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da] bg-transparent" required><option value="">Select Country</option><option>United States</option><option>United Kingdom</option><option>India</option><option>Canada</option><option>Australia</option><option>Germany</option><option>UAE</option></select></div>
+            <div className="md:col-span-2"><label className="block font-medium text-black mb-2">Contact Number</label><input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Enter your contact number" className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da]" required /></div>
           </div>
-          <div className="mb-6"><label className="block text-[16px] font-semibold text-black mb-2">Leave us your message here</label><textarea name="message" value={formData.message} onChange={handleChange} placeholder="Write us your request here" rows={3} className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da] resize-none" required /></div>
-          <div className="mb-8"><label className="flex items-center gap-3 cursor-pointer"><input type="checkbox" checked={agreed} onChange={(e) => setAgreed(e.target.checked)} className="w-5 h-5 text-[#0095da] rounded" /><span className="text-[14px] text-[#494949]">I agree to the processing of my personal data and consent to be contacted by Saja.</span></label></div>
+          <div className="mb-6"><label className="block font-medium text-black mb-2">Leave us your message here</label><textarea name="message" value={formData.message} onChange={handleChange} placeholder="Write us your request here" rows={3} className="w-full border-b-2 border-gray-200 pb-2 focus:outline-none focus:border-[#0095da] resize-none" required /></div>
+          <div className="mb-8"><label className="flex  font-medium items-center gap-3 cursor-pointer"><input type="checkbox" checked={agreed} onChange={(e) => setAgreed(e.target.checked)} className="w-5 h-5 text-[#0095da] rounded" /><span className="text-[14px] text-[#494949]">I agree to the processing of my personal data and consent to be contacted by Saja.</span></label></div>
           <button type="submit" disabled={loading} className="btn-primary px-8 py-3 bg-[#0095da] text-white font-semibold rounded-full hover:bg-[#0077b3] disabled:opacity-50">{loading ? "SENDING..." : "Contact Us"}</button>
         </form>
       </div>
@@ -722,10 +722,10 @@ export default function PricingPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-6 lg:px-16 py-16 md:py-20 bg-white">
-      <h1 className="text-[44px] font-bold text-black text-center mb-4">
+      <h1 className="wwd-title font-bold text-black text-center mb-4">
         Simple pricing. Powerful insights.
       </h1>
-      <p className="text-[20px] text-[#494949] text-center mb-12">
+      <p className="wwd-desc text-[#494949] text-center mb-12">
         Choose your plan based on response volume and team size.
       </p>
 
@@ -735,7 +735,7 @@ export default function PricingPage() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`flex-1 py-3 text-[18px] font-medium transition-colors ${activeTab === tab
+              className={`flex-1 py-3 wwd-desc font-medium transition-colors ${activeTab === tab
                 ? "text-[#0095da] border-b-2 border-[#0095da]"
                 : "text-[#494949] hover:text-[#0095da]"
                 }`}

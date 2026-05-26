@@ -90,15 +90,22 @@ export default function WhatWeDoSection() {
     <section className="w-full bg-white">
       {/* Design */}
       <div id="features" className="w-full bg-[#FDBD07] h-41 md:h-45 lg:h-49 xl:53.75 flex items-center justify-center ">
-        <div>
+        <div className="flex flex-col gap-4">
           <p className="strip-title text-center text-white ">What we do?</p>
           <p className="strip-desc text-center text-black ">Design. Collect. Analyse. All in one platform.</p>
         </div>
       </div>
 
       <div className="max-w-360 mx-auto px-8 lg:px-20 py-20 sm:flex">
-        <div className="sm:w-2/5"><button className="wwd-button py-1 px-5 rounded-full">Design</button></div>
-        <div className="flex flex-col lg:flex-row gap-12 items-start">
+
+        <div className="sm:w-2/5 relative">
+          <div className="sticky top-20">
+            <button className="wwd-button py-1 px-5 rounded-full animate-pulse">
+              Design
+            </button>
+          </div>
+        </div>
+        <div className=" sm:w-3/5 flex flex-col lg:flex-row gap-12 items-start">
           <div className="flex-1">
             <h2 className="wwd-title text-black mb-2">Design surveys your way</h2>
             <div className="">
@@ -125,8 +132,14 @@ export default function WhatWeDoSection() {
 
       {/* Collect */}
       <div className="max-w-360 mx-auto px-8 lg:px-20 pb-20 sm:flex">
-        <div className="sm:w-2/5"><button className="wwd-button py-1 px-5 rounded-full">Collect</button></div>
-        <div className="flex flex-col gap-12 items-start">
+        <div className="sm:w-2/5 relative">
+          <div className="sticky top-20">
+            <button className="wwd-button py-1 px-5 rounded-full animate-pulse">
+              Collect
+            </button>
+          </div>
+        </div>
+        <div className=" sm:w-3/5 flex flex-col gap-12 items-start">
           <div className="flex flex-col">
             <h2 className="wwd-title text-black mb-2">Collect Data from Users, easily</h2>
             <p className="wwd-desc text-[#494949] mb-2">
@@ -160,8 +173,14 @@ export default function WhatWeDoSection() {
 
       {/* Analyse */}
       <div className="max-w-360 mx-auto px-8 lg:px-20 pb-20 sm:flex">
-        <div className="sm:w-2/5"><button className="wwd-button  py-1 px-5 rounded-full">Analyse</button></div>
-        <div className="flex flex-col lg:flex-row gap-12 items-start">
+        <div className="sm:w-2/5 relative">
+          <div className="sticky top-20">
+            <button className="wwd-button py-1 px-5 rounded-full animate-pulse">
+              Analyse
+            </button>
+          </div>
+        </div>
+        <div className=" sm:w-3/5 flex flex-col lg:flex-row gap-12 items-start">
           <div className="flex-1">
             <h2 className="wwd-title text-black mb-2">Understand Feedback Instantly</h2>
             <p className="wwd-desc text-[#494949] mb-2">

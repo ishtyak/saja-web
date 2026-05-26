@@ -121,7 +121,7 @@ export default function ContactSection() {
               What can we help you with?
             </h3>
 
-            <ul className="flex flex-col gap-2 text-[18px] text-[#727b84]">
+            <ul className="flex flex-col gap-2 text-[#727b84]">
               <li>• Request a product demo</li>
               <li>• Discuss your survey or CX requirements</li>
               <li>• Know insights with industry experts</li>
@@ -134,7 +134,7 @@ export default function ContactSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 
               <div>
-                <label className="block text-[18px] font-medium mb-2">
+                <label className="block font-medium mb-2">
                   Name
                 </label>
                 <input
@@ -148,7 +148,7 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <label className="block text-[18px] font-medium mb-2">
+                <label className="block font-medium mb-2">
                   Last Name
                 </label>
                 <input
@@ -162,7 +162,7 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <label className="block text-[18px] font-medium mb-2">
+                <label className="block font-medium mb-2">
                   Business Email
                 </label>
                 <input
@@ -176,7 +176,7 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <label className="block text-[18px] font-medium mb-2">
+                <label className="block font-medium mb-2">
                   Country
                 </label>
                 <select
@@ -195,7 +195,7 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <label className="block text-[18px] font-medium mb-2">
+                <label className="block font-medium mb-2">
                   Contact Number
                 </label>
                 <input
@@ -210,7 +210,7 @@ export default function ContactSection() {
             </div>
 
             <div className="mb-6">
-              <label className="block text-[18px] font-medium mb-2">
+              <label className="block font-medium mb-2">
                 Leave us message
               </label>
 
@@ -232,7 +232,7 @@ export default function ContactSection() {
                 className=" w-4 h-4"
               />
 
-              <label className="text-[18px] font-medium">
+              <label className="font-medium">
                 I give Saja permission to contact me
               </label>
             </div>

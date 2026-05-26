@@ -63,20 +63,20 @@ export default function ResourcesPage() {
       <div className=" mx-auto px-8 lg:px-16 pt-5 pb-20">
         <div className="flex flex-col lg:flex-row gap-16 items-start  mx-auto w-full">
           {/* Booklet Image */}
-          <div className="lg:w-110 shrink-0">
+          <div className="sm:w-1/3  shrink-0">
             <div className="w-full rounded-xl overflow-hidden flex flex-col items-center justify-between">
               <Image
                 src="/figma-refs/ref.png"
                 alt="Saja Logo"
                 width={400}
-                height={400}
+                height={300}
                 className=""
               />
             </div>
           </div>
 
           {/* Form */}
-          <div className="flex-1 sm:w-1/2">
+          <div className="flex-1 sm:w-2/3">
             <h1 className="wwd-title text-black mb-4">
               The Art &amp; Science of Memorable Customer Experience
             </h1>
@@ -88,7 +88,7 @@ export default function ResourcesPage() {
 
             <div className="flex flex-col gap-6 mb-6">
               <div>
-                <label className="block text-[22px] font-medium text-black mb-2">
+                <label className="block font-medium  text-black mb-2">
                   Name
                 </label>
 
@@ -102,7 +102,7 @@ export default function ResourcesPage() {
               </div>
 
               <div>
-                <label className="block text-[22px] font-medium text-black mb-2">
+                <label className="block font-medium text-black mb-2">
                   Email ID
                 </label>
 
@@ -127,7 +127,7 @@ export default function ResourcesPage() {
 
               <label
                 htmlFor="resources-consent"
-                className="text-[22px] text-black"
+                className=" text-black"
               >
                 I give Saja permission to contact me
               </label>
@@ -147,8 +147,8 @@ export default function ResourcesPage() {
             <button
               onClick={downloadBooklet}
               disabled={loading}
-              style={{ padding: "5px 10px" }}
-              className="btn-primary text-[16px] font-semibold justify-center disabled:opacity-50"
+              style={{ padding: "8px 20px" }}
+              className="btn-primary button justify-center disabled:opacity-50"
             >
               {loading ? "Submitting..." : "Download the Booklet"}
             </button>
