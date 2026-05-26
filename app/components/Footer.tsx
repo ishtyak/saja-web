@@ -63,7 +63,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-6 pt-6 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
           <em className="text-[#494949] text-[14px]">
-            Copyright © 2026 SAJA Feedback Insights | All Rights Reserved
+            Copyright © 2026 SAJA Tech Pvt. Ltd. | All Rights Reserved
           </em>
           {/* Social Icons */}
           <div className="flex items-center gap-4">

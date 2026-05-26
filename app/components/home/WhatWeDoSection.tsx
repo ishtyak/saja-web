@@ -99,7 +99,7 @@ export default function WhatWeDoSection() {
       <div className="max-w-360 mx-auto px-8 lg:px-20 py-20 sm:flex">
 
         <div className="sm:w-2/5 relative">
-          <div className="sticky top-20">
+          <div className="sticky top-[15vh]">
             <button className="wwd-button py-1 px-5 rounded-full animate-pulse">
               Design
             </button>
@@ -133,7 +133,7 @@ export default function WhatWeDoSection() {
       {/* Collect */}
       <div className="max-w-360 mx-auto px-8 lg:px-20 pb-20 sm:flex">
         <div className="sm:w-2/5 relative">
-          <div className="sticky top-20">
+          <div className="sticky top-[15vh]">
             <button className="wwd-button py-1 px-5 rounded-full animate-pulse">
               Collect
             </button>
@@ -174,7 +174,7 @@ export default function WhatWeDoSection() {
       {/* Analyse */}
       <div className="max-w-360 mx-auto px-8 lg:px-20 pb-20 sm:flex">
         <div className="sm:w-2/5 relative">
-          <div className="sticky top-20">
+          <div className="sticky top-[15vh]">
             <button className="wwd-button py-1 px-5 rounded-full animate-pulse">
               Analyse
             </button>

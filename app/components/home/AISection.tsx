@@ -38,7 +38,7 @@ export default function AISection() {
             {aiFeatures.map((f) => (
               <div
                 key={f.title}
-                className="w-full max-w-[420px] min-h-[220px] rounded-2xl p-6 md:p-7 shadow-sm border border-gray-100
+                className="w-full max-w-[420px] min-h-fit rounded-2xl p-6 md:p-7  shadow-sm border shadow-[#A9E4FF] border-[#A9E4FF]
                      flex flex-col justify-start"
               >
                 <h3 className="wwd-f-title font-semibold text-[#0095DA] mb-3">

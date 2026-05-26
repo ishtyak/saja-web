@@ -30,7 +30,7 @@ function ShieldIcon() {
 
 export default function SecuritySection() {
   return (
-    <section className="w-full bg-[#f8f9fa] py-20">
+    <section className="w-full  py-20">
       <div className="max-w-360 mx-auto px-8 lg:px-16">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           {/* Left: shield icon + title */}

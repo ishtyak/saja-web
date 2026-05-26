@@ -34,7 +34,7 @@ const individualPlans = [
     priceLabel: "/ month",
     sub: "$240 billed annually",
     ctaLabel: "Choose Plan",
-    highlight: true,
+    highlight: false,
     users: "1 user",
     responses: "2,000 responses per year",
     features: ["Unlimited Surveys", "Unlimited Questions", "NPS", "Phone Support"],
@@ -62,7 +62,7 @@ const teamsPlans = [
     priceLabel: "/ user/ month",
     sub: "$240 billed annually",
     ctaLabel: "Choose Plan",
-    highlight: true,
+    highlight: false,
     users: "3+ users",
     responses: "50,000 responses per year",
     features: ["Unlimited Surveys", "Team Collaboration", "Role-based permissions", "Audit Logs"],
@@ -307,11 +307,12 @@ function PlanCards({ plans, onPlanSelect, selectedPlanId }: { plans: any[]; onPl
       {plans.map((plan) => (
         <div
           key={plan.id}
-          className={`w-64 py-2 relative rounded-2xl   flex flex-col items-center text-center transition-all duration-300 cursor-pointer ${selectedPlanId === plan.id
-            ? "border-[#0095da] bg-[linear-gradient(180deg,#f7e7b2_0%,#d7e8e8_40%,#84cef7_100%)] shadow-2xl ring-2 ring-[#0095da] ring-opacity-50"
-            : plan.highlight && !selectedPlanId
-              ? " bg-white shadow-xl md:scale-105 z-10"
-              : " bg-white hover:shadow-lg hover:border-[#0095da]/50"
+          className={`w-64 py-2 relative rounded-2xl border-2 flex flex-col items-center text-center transition-all duration-300 cursor-pointer
+    ${selectedPlanId === plan.id
+              ? "border-[#0095da] shadow-sm ring-1 shadow-[#0095DA] ring-[#0095da]/50"
+              : plan.highlight && !selectedPlanId
+                ? "border-[#A9E4FF] bg-white shadow-xl md:scale-105 z-10"
+                : "border-[#A9E4FF] bg-white hover:shadow-lg hover:border-[#0095da]"
             }`}
           onClick={() => onPlanSelect(plan.id)}
         >
@@ -380,7 +381,21 @@ function IndividualFeatureTable() {
     <div className="mt-8">
       {Object.entries(featureComparisonRows).map(([category, rows]) => (
         <div key={category} className="mb-8">
-          <h4 className="text-[18px] font-bold text-black mb-4">{category}</h4>
+          <div  className="py-3 flex items-center">
+            <div className="w-1/2 md:w-2/5">
+              <p className="text-[15px] font-bold text-[#494949]">{category}</p>
+            </div>
+            <div className="w-1/6 md:w-1/5 ">
+              <CellValue val={"Free"} />
+            </div>
+            <div className="w-1/6 md:w-1/5 ">
+              <CellValue val={"Standard"} />
+            </div>
+            <div className="w-1/6 md:w-1/5 ">
+              <CellValue val={"Advantage"} />
+            </div>
+          </div>
+          {/* <h4 className="text-[18px] font-bold text-black mb-4">{category}</h4> */}
           {rows.map((row, idx) => (
             <div key={row.feature} className="py-3 flex items-center">
               <div className="w-1/2 md:w-2/5">
@@ -409,7 +424,18 @@ function TeamsFeatureTable() {
     <div className="mt-8">
       {Object.entries(teamsFeatureRows).map(([category, rows]) => (
         <div key={category} className="mb-8">
-          <h4 className="text-[18px] font-bold text-black mb-4">{category}</h4>
+          <div className="py-3 flex items-center">
+            <div className="w-1/2 md:w-2/5">
+              <p className="text-[15px] font-bold text-[#494949]">{category}</p>
+            </div>
+            <div className="w-1/4 md:w-1/5 ">
+              <CellValue val={"Standard"} />
+            </div>
+            <div className="w-1/4 md:w-1/5 ">
+              <CellValue val={"Advantage"} />
+            </div>
+          </div>
+          {/* <h4 className="text-[18px] font-bold text-black mb-4">{category}</h4> */}
           {rows.map((row, idx) => (
             <div key={row.feature} className="py-3 flex items-center">
               <div className="w-1/2 md:w-2/5">
