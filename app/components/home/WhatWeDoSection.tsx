@@ -1,5 +1,7 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const designFeatures = [
   {
@@ -86,6 +88,7 @@ function CheckIcon() {
 }
 
 export default function WhatWeDoSection() {
+  const [srcImg,setSrcImg] = useState('collect')
   return (
     <section className="w-full bg-white">
       {/* Design */}
@@ -157,13 +160,19 @@ export default function WhatWeDoSection() {
               ))}
             </ul>
           </div>
-          <div className="">
+          <div className="min-h-80">
             <ul className="flex justify-between mb-2 font-bold text-[#0095DA]">
-              <li className="underline">Email</li>
-              <li className="underline">Link & QR</li>
-              <li className="underline">Saja App</li>
+              <li onClick={()=>{
+                setSrcImg("collect")
+              }} className="underline">Email</li>
+              <li onClick={()=>{
+                setSrcImg("laq")
+              }} className="underline">Link & QR</li>
+              <li onClick={()=>{
+                setSrcImg("ai")
+              }} className="underline">Saja App</li>
             </ul>
-            <Image src={'/figma-refs/collect.png'} alt="Collect" height={400} width={600}></Image>
+            <Image src={`/figma-refs/${srcImg}.png`} alt="Collect" height={400} width={600}></Image>
           </div>
 
         </div>

@@ -308,7 +308,7 @@ function PlanCards({ plans, onPlanSelect, selectedPlanId }: { plans: any[]; onPl
         <div
           key={plan.id}
           className={`w-64 py-2 relative rounded-2xl border-2 flex flex-col items-center text-center transition-all duration-300 cursor-pointer
-    ${selectedPlanId === plan.id
+              ${selectedPlanId === plan.id
               ? "border-[#0095da] shadow-sm ring-1 shadow-[#0095DA] ring-[#0095da]/50"
               : plan.highlight && !selectedPlanId
                 ? "border-[#A9E4FF] bg-white shadow-xl md:scale-105 z-10"
