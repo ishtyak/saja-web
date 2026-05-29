@@ -50,9 +50,9 @@ export default function SajaAppSection() {
             <p className="wwd-desc text-[#494949] mb-5">
               Empower your teams to capture real-world feedback anywhere.
             </p>
-            <Link href="/get-started" className="wwd-link text-[#0095DA] font-medium hover:underline">
+            {/* <Link href="/get-started" className="wwd-link text-[#0095DA] font-medium hover:underline">
               Get Started with App →
-            </Link>
+            </Link> */}
             <ul className="flex flex-col gap-5 mt-8">
               {appFeatures.map((f) => (
                 <li key={f.title} className="flex gap-4">
