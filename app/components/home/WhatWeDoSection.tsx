@@ -116,7 +116,7 @@ export default function WhatWeDoSection() {
                 Start from a blank canvas, use AI or upload your Questionnaire, all your choice. Customize every element without compromising speed or structure.
               </p>
             </div>
-            <Link href="#" className="wwd-link text-[#0095da] hover:underline mb-2 inline-block">
+            <Link href="https://insights.saja.biz/login" className="wwd-link text-[#0095da] hover:underline mb-2 inline-block">
               Start Designing →
             </Link>
             <div className="grid grid-cols-1  gap-x-12 gap-y-6 mt-4">
@@ -148,7 +148,7 @@ export default function WhatWeDoSection() {
             <p className="wwd-desc text-[#494949] mb-2">
               Reach respondents where they are. Share surveys through flexible channels while keeping responses secure and organized.
             </p>
-            <Link href="#" className="wwd-link text-[#0095da] font-medium hover:underline mb-8 inline-block">
+            <Link href="https://insights.saja.biz/login" className="wwd-link text-[#0095da] font-medium hover:underline mb-8 inline-block">
               Collect →
             </Link>
             <ul className="grid grid-cols-1  gap-x-12 gap-y-6 mt-4">
@@ -195,7 +195,7 @@ export default function WhatWeDoSection() {
             <p className="wwd-desc text-[#494949] mb-2">
               Visual dashboards update in real time, helping you spot trends, issues, and opportunities as feedback comes in.
             </p>
-            <Link href="#" className="wwd-link text-[#0095da] font-medium hover:underline mb-6 inline-block">
+            <Link href="https://insights.saja.biz/login" className="wwd-link text-[#0095da] font-medium hover:underline mb-6 inline-block">
               Begin Analyzing →
             </Link>
             <div className="grid grid-cols-1  gap-x-12 gap-y-6">

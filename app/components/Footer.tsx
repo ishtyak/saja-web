@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#E7E7E7] border-t h-108.5 border-gray-200">
+    <footer className="bg-[#E7E7E7] border-t h-fit border-gray-200">
       <div className="max-w-360 mx-auto px-8 lg:px-16 py-10">
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Logo & Tagline */}
@@ -13,7 +13,7 @@ export default function Footer() {
           </div>
 
           {/* Links */}
-          <div className="lg:w-1/2 flex-1 grid grid-cols-1 sm:grid-cols-3 gap-10">
+          <div className="lg:w-1/2 flex-1 grid grid-cols-2 sm:grid-cols-3 gap-10">
             {/* Product */}
             {/* , {label:"Case studies",href:'/#'}, {label:"Reviews",href:'/#'}, {label:"Updates",href:'/#'} */}
             <div>
