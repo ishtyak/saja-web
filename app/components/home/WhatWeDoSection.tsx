@@ -162,15 +162,15 @@ export default function WhatWeDoSection() {
           </div>
           <div className="min-h-80">
             <ul className="flex justify-between mb-2 font-bold text-[#0095DA]">
-              <li onClick={()=>{
+              <li  onClick={()=>{
                 setSrcImg("collect")
-              }} className="underline">Email</li>
+              }} className="underline cursor-pointer">Email</li>
               <li onClick={()=>{
                 setSrcImg("laq")
-              }} className="underline">Link & QR</li>
+              }} className="underline cursor-pointer">Link & QR</li>
               <li onClick={()=>{
                 setSrcImg("ai")
-              }} className="underline">Saja App</li>
+              }} className="underline cursor-pointer">Saja App</li>
             </ul>
             <Image src={`/figma-refs/${srcImg}.png`} alt="Collect" height={400} width={600}></Image>
           </div>

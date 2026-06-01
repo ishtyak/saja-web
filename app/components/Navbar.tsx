@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const navLinks = [
@@ -14,7 +15,20 @@ const navLinks = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+
+    if (pathname === "/") {
+      document.getElementById("contact")?.scrollIntoView({
+        behavior: "smooth",
+      });
+    } else {
+      router.push("/#contact");
+    }
+  };
 
   return (
     <header className="w-full bg-white  border-b border-gray-100  ">
@@ -52,17 +66,17 @@ export default function Navbar() {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4">
-          <Link href={"/#contact"} className="nav-button flex items-center gap-2 text-[#494949] font-medium hover:text-[#0095da] transition-colors">
+          <button onClick={handleContactClick} className="nav-button flex items-center gap-2 text-[#494949] font-medium hover:text-[#0095da] transition-colors">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="12" cy="12" r="10" />
               <line x1="2" y1="12" x2="22" y2="12" />
               <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
             </svg>
             Support
-          </Link>
+          </button>
           <Link
             href="https://insights.saja.biz/login"
-            className="nav-button border border-gray-300 rounded-full px-6 py-1 hover:border-[#0095da] hover:text-[#0095da] transition-colors"
+            className="nav-button border bg-white border-gray-300 rounded-full px-6 py-1  hover:border-[#0095da] hover:text-[#0095da] transition-colors"
           >
             Login
           </Link>

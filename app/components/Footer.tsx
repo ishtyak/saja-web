@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,7 +20,7 @@ export default function Footer() {
             <div>
               <h4 className="text-[#494949] text-[16px] font-bold mb-4">Product</h4>
               <ul className="flex flex-col gap-3">
-                {[{label:"Features",href:'/#features'}, {label:"Pricing",href:'/pricing'}].map((item) => (
+                {[{ label: "Features", href: '/#features' }, { label: "Pricing", href: '/pricing' }].map((item) => (
                   <li key={item.label}>
                     <Link href={item.href} className="text-[#929292] text-[14px] hover:text-[#0095da] transition-colors">
                       {item.label}
@@ -33,9 +34,10 @@ export default function Footer() {
             <div>
               <h4 className="text-[#494949] text-[16px] font-bold mb-4">Company</h4>
               <ul className="flex flex-col gap-3">
-                {[{label:"About",href:'/about'}, {label:"Contact us",href:'/#contact'}, {label:"Resources",href:'/resources'}, {label:"Faq",href:'/faq'},{label:"Privacy Policy",href:'/privacy-policy'},{label:"Terms of Use",href:'/terms-of-use'}].map((item) => (
-                  <li key={item.label}>
-                    <Link href={item.href} className="text-[#929292] text-[14px] hover:text-[#0095da] transition-colors">
+                {[{ label: "About", href: '/about' }, { label: "Resources", href: '/resources' }, { label: "Faq", href: '/faq' }, { label: "Privacy Policy", href: '/privacy-policy' }, { label: "Terms of Use", href: '/terms-of-use' }].map((item) => (
+                  <li key={item.label} >
+                    <Link href={item.href}
+                      className="text-[#929292] text-[14px] hover:text-[#0095da] transition-colors">
                       {item.label}
                     </Link>
                   </li>
@@ -44,12 +46,19 @@ export default function Footer() {
             </div>
 
             {/* Support */}
-             {/* "Help center", "Server status", "Report a bug", "Chat support" */}
+            {/* "Help center", "Server status", "Report a bug", "Chat support" */}
             <div>
               <h4 className="text-[#494949] text-[16px] font-bold mb-4">Support</h4>
               <ul className="flex flex-col gap-3">
-                {[{label:'Contact-us',href:'/#contact'},].map((item) => (
-                  <li key={item.href}>
+                {[{ label: 'Contact-us', href: '' },].map((item) => (
+                  <li key={item.href} onClick={(e) => {
+                    if (item.href) return;
+                    e.preventDefault();
+                    document.getElementById("contact")?.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                  }}>
                     <Link href={item.href} className="text-[#929292] text-[14px] hover:text-[#0095da] transition-colors">
                       {item.label}
                     </Link>
