@@ -17,7 +17,7 @@ export default function HeroSection() {
             Design surveys manually or generate them using AI. Saja helps you capture meaningful feedback, and turn responses into clear insights, without effort.
           </p>
           <div className="mt-8">
-            <Link href="/https://insights.saja.biz/signup" style={{padding:'10px 18px'}} className="btn-primary button">
+            <Link href="https://insights.saja.biz/signup" target="_blank" style={{padding:'10px 18px'}} className="btn-primary button">
               Create Your First Survey
             </Link>
           </div>
