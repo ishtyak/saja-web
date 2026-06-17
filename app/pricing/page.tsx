@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import StripeCheckoutButton from "../components/stripecheckoutbutton";
 
-type PlanTab = "Individual" | "Teams" | "Enterprise" | "Market Research";
+type PlanTab = "Individual" | "Business" | "Teams" | "Enterprise" | "Market Research" | "App Based Survey";
 
 function CheckIcon({ color = "#0095da" }: { color?: string }) {
   return (
@@ -18,7 +19,7 @@ const individualPlans = [
   {
     id: "free",
     name: "Free",
-    price: "Free",
+    price: "$0",
     priceLabel: null,
     sub: "Upgrade to unlock more benefits!",
     ctaLabel: "Choose Plan",
@@ -29,7 +30,7 @@ const individualPlans = [
   },
   {
     id: "standard",
-    name: "Individual Standard",
+    name: "Standard",
     price: "$20",
     priceLabel: "/ month",
     sub: "$240 billed annually",
@@ -41,7 +42,7 @@ const individualPlans = [
   },
   {
     id: "advantage",
-    name: "Individual Advantage",
+    name: "Advantage",
     price: "$40",
     priceLabel: "/ month",
     sub: "$480 billed annually",
@@ -339,11 +340,11 @@ function PlanCards({ plans, onPlanSelect, selectedPlanId }: { plans: any[]; onPl
           <h3 className="plan-t1 font-bold  text-black mb-2">{plan.name}</h3>
           <div className="flex items-end gap-1 mb-1">
             <p className="plan-t2 font-bold text-black">{plan.price}</p>
-            {plan.priceLabel && <span className="plan-t3 text-[#494949] mb-2">{plan.priceLabel}/{plan.users}</span>}
+            {plan.priceLabel && <span className="plan-t3 text-[#494949] mb-2">{plan.priceLabel}</span>}
           </div>
           {/* <p className="plan-t3 text-[#494949] mb-2">👥 {plan.users}</p>*/}
           <p className="plan-t3 text-[#494949] mb-4">{plan.sub}</p>
-          <button
+          {/* <button
             style={{
               padding: "5px 40px"
             }}
@@ -359,7 +360,11 @@ function PlanCards({ plans, onPlanSelect, selectedPlanId }: { plans: any[]; onPl
               }`}
           >
             {selectedPlanId === plan.id ? "✓ SELECTED" : plan.ctaLabel}
-          </button>
+          </button> */}
+          <StripeCheckoutButton
+            userId="123"
+            planId="premium"
+          />
           <p className="plan-t3 text-[#0095da] font-medium mb-4">{plan.responses}</p>
           <ul className="flex flex-col gap-2 w-fit justify-center r">
             {plan.features.map((f: string) => (
@@ -381,7 +386,7 @@ function IndividualFeatureTable() {
     <div className="mt-8">
       {Object.entries(featureComparisonRows).map(([category, rows]) => (
         <div key={category} className="mb-8">
-          <div  className="py-3 flex items-center">
+          <div className="py-3 flex items-center">
             <div className="w-1/2 md:w-2/5">
               <p className="text-[15px] font-bold text-[#494949]">{category}</p>
             </div>
@@ -741,7 +746,7 @@ function EnterpriseTab() {
   );
 }
 
-const tabs: PlanTab[] = ["Individual", "Teams", "Enterprise", "Market Research"];
+const tabs: PlanTab[] = ["Individual", "Business", "Enterprise", "App Based Survey"];
 
 export default function PricingPage() {
   const [activeTab, setActiveTab] = useState<PlanTab>("Individual");
@@ -774,8 +779,8 @@ export default function PricingPage() {
 
       <div className="transition-all duration-300">
         {activeTab === "Individual" && <IndividualTab />}
-        {activeTab === "Teams" && <TeamsTab />}
-        {activeTab === "Market Research" && <MarketResearchTab />}
+        {activeTab === "Business" && <TeamsTab />}
+        {activeTab === "App Based Survey" && <MarketResearchTab />}
         {activeTab === "Enterprise" && <EnterpriseTab />}
       </div>
     </div>

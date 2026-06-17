@@ -1,3 +1,5 @@
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function HeroSection() {
@@ -17,9 +19,20 @@ export default function HeroSection() {
             Design surveys manually or generate them using AI. Saja helps you capture meaningful feedback, and turn responses into clear insights, without effort.
           </p>
           <div className="mt-8">
-            <Link href="https://insights.saja.biz/signup" target="_blank" style={{padding:'10px 18px'}} className="btn-primary button">
+            <Link href="https://insights.saja.biz/signup" target="_blank" style={{ padding: '10px 18px' }} className="btn-primary button">
               Create Your First Survey
             </Link>
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <div className="flex gap-3  border-2 border-[#A9E4FF] p-3 rounded-lg">
+            <div className="flex items-center">
+              <Image src={'/figma-refs/krossiq.png'} alt="krossIq" height={20} width={100}></Image>
+            </div>
+            <div className="text-lg">
+              <p>Need Advanced Analytics?</p>
+              <Link className="text-sky-500 flex " href={''}>Try KrossIQ Now <ArrowRight /></Link>
+            </div>
           </div>
         </div>
       </div>
