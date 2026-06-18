@@ -19,7 +19,8 @@ const individualPlans = [
   {
     id: "free",
     name: "Free",
-    price: "$0",
+    price: 0,
+    credits:10,
     priceLabel: null,
     sub: "Upgrade to unlock more benefits!",
     ctaLabel: "Choose Plan",
@@ -31,7 +32,8 @@ const individualPlans = [
   {
     id: "standard",
     name: "Standard",
-    price: "$20",
+    price: 79,
+    credits:10,
     priceLabel: "/ month",
     sub: "$240 billed annually",
     ctaLabel: "Choose Plan",
@@ -43,7 +45,8 @@ const individualPlans = [
   {
     id: "advantage",
     name: "Advantage",
-    price: "$40",
+    price: 199,
+    credits:10,
     priceLabel: "/ month",
     sub: "$480 billed annually",
     ctaLabel: "Choose Plan",
@@ -59,10 +62,11 @@ const teamsPlans = [
   {
     id: "team-standard",
     name: "Standard",
-    price: "$20",
+    price: 79,
     priceLabel: "/ user/ month",
     sub: "$240 billed annually",
     ctaLabel: "Choose Plan",
+    credits:10,
     highlight: false,
     users: "3+ users",
     responses: "50,000 responses per year",
@@ -71,7 +75,8 @@ const teamsPlans = [
   {
     id: "team-advantage",
     name: "Advantage",
-    price: "$40",
+    price: 299,
+    credits:10,
     priceLabel: "/ user/ month",
     sub: "$480 billed annually",
     ctaLabel: "Choose Plan",
@@ -339,12 +344,12 @@ function PlanCards({ plans, onPlanSelect, selectedPlanId }: { plans: any[]; onPl
 
           <h3 className="plan-t1 font-bold  text-black mb-2">{plan.name}</h3>
           <div className="flex items-end gap-1 mb-1">
-            <p className="plan-t2 font-bold text-black">{plan.price}</p>
+            <p className="plan-t2 font-bold text-black">${plan.price}</p>
             {plan.priceLabel && <span className="plan-t3 text-[#494949] mb-2">{plan.priceLabel}</span>}
           </div>
           {/* <p className="plan-t3 text-[#494949] mb-2">👥 {plan.users}</p>*/}
           <p className="plan-t3 text-[#494949] mb-4">{plan.sub}</p>
-          {/* <button
+          <button
             style={{
               padding: "5px 40px"
             }}
@@ -359,12 +364,11 @@ function PlanCards({ plans, onPlanSelect, selectedPlanId }: { plans: any[]; onPl
                 : "bg-gray-100 text-[#0095da] hover:bg-[#0095da]/10 border border-transparent hover:border-[#0095da]"
               }`}
           >
-            {selectedPlanId === plan.id ? "✓ SELECTED" : plan.ctaLabel}
-          </button> */}
-          <StripeCheckoutButton
-            userId="123"
-            planId="premium"
-          />
+            {/* {selectedPlanId === plan.id ? "✓ SELECTED" : plan.ctaLabel} */}
+            <StripeCheckoutButton
+              plan={plan}
+            />
+          </button>
           <p className="plan-t3 text-[#0095da] font-medium mb-4">{plan.responses}</p>
           <ul className="flex flex-col gap-2 w-fit justify-center r">
             {plan.features.map((f: string) => (

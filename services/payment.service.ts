@@ -1,8 +1,5 @@
 export const createCheckoutSession = async (
-    payload: {
-        userId: string;
-        planId: string;
-    }
+    payload: any
 ) => {
     const response = await fetch(
         `${process.env.NODE_ENV == 'development' ? process.env.NEXT_PUBLIC_API_URL : process.env.NEXT_PUBLIC_API_URL_PROD}/api/payment/create-checkout-session`,

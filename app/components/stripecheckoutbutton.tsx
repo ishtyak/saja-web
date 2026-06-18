@@ -2,9 +2,8 @@
 
 import { createCheckoutSession } from "@/services/payment.service";
 
-export default function StripeCheckoutButton({ userId,
-    planId }: any) {
-    const payload = { userId, planId }
+export default function StripeCheckoutButton({ plan }: any) {
+    const payload = plan
     const handleCheckout = async () => {
         try {
             const { checkoutUrl } =
