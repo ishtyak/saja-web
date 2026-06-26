@@ -349,7 +349,8 @@ function PlanCards({ plans, onPlanSelect, selectedPlanId }: { plans: any[]; onPl
           </div>
           {/* <p className="plan-t3 text-[#494949] mb-2">👥 {plan.users}</p>*/}
           <p className="plan-t3 text-[#494949] mb-4">{plan.sub}</p>
-          <button
+          <Link
+          href={'https://insights.saja.biz/login'}
             style={{
               padding: "5px 40px"
             }}
@@ -364,11 +365,11 @@ function PlanCards({ plans, onPlanSelect, selectedPlanId }: { plans: any[]; onPl
                 : "bg-gray-100 text-[#0095da] hover:bg-[#0095da]/10 border border-transparent hover:border-[#0095da]"
               }`}
           >
-            {/* {selectedPlanId === plan.id ? "✓ SELECTED" : plan.ctaLabel} */}
-            <StripeCheckoutButton
+            {selectedPlanId === plan.id ? "✓ SELECTED" : plan.ctaLabel}
+            {/* <StripeCheckoutButton
               plan={plan}
-            />
-          </button>
+            /> */}
+          </Link>
           <p className="plan-t3 text-[#0095da] font-medium mb-4">{plan.responses}</p>
           <ul className="flex flex-col gap-2 w-fit justify-center r">
             {plan.features.map((f: string) => (

@@ -31,7 +31,7 @@ export default function HeroSection() {
             </div>
             <div className="text-lg">
               <p>Need Advanced Analytics?</p>
-              <Link className="text-sky-500 flex " href={''}>Try KrossIQ Now <ArrowRight /></Link>
+              <Link target="_blank" className="text-sky-500 flex " href={'https://krossiq.com'}>Try KrossIQ Now <ArrowRight /></Link>
             </div>
           </div>
         </div>
