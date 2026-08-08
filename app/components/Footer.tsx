@@ -34,7 +34,7 @@ export default function Footer() {
             <div>
               <h4 className="text-[#494949] text-[16px] font-bold mb-4">Company</h4>
               <ul className="flex flex-col gap-3">
-                {[{ label: "About", href: '/about' }, { label: "Resources", href: '/resources' }, { label: "Faq", href: '/faq' }, { label: "Privacy Policy", href: '/privacy-policy' }, { label: "Terms of Use", href: '/terms-of-use' }].map((item) => (
+                {[{ label: "About", href: '/about' }, { label: "Resources", href: '/resources' }, { label: "Faq", href: '/faq' }, { label: "Privacy Policy", href: '/privacy-policy' }, { label: "App Privacy Policy", href: '/app-privacy-policy' }, { label: "Terms of Use", href: '/terms-of-use' }].map((item) => (
                   <li key={item.label} >
                     <Link href={item.href}
                       className="text-[#929292] text-[14px] hover:text-[#0095da] transition-colors">
