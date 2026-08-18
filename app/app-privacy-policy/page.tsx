@@ -173,8 +173,8 @@ const PrivacyPolicy: React.FC = () => {
       <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
         {/* Header */}
         <div className="bg-gradient-to-r from-saja-primary to-saja-secondary px-6 py-8 sm:px-10">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white">App Privacy Policy</h1>
-          <p className="text-white/80 mt-2">
+          <h1 className="text-3xl sm:text-4xl font-bold">App Privacy Policy</h1>
+          <p className="mt-2">
             Last Updated: <span className="font-medium">{currentDate}</span>
           </p>
         </div>
