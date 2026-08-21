@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import { IoClose, IoSparklesOutline } from "react-icons/io5";
 import { MdCheck } from "react-icons/md";
 import PaymentUi from "../components/cus_stripe_checkout";
+import StartButton from "../components/StartButton";
 
 // Types
 interface Plan {
@@ -243,14 +244,9 @@ const PlanCard: React.FC<PlanCardProps> = ({ plan, selectedPlan, onSelectPlan })
         <button
           type="button"
           onClick={handlePlanSelect}
-          className={`w-full rounded-lg px-4 py-2.5 text-sm font-semibold transition-all duration-200
-            ${isSelected
-              ? "bg-gray-100 text-gray-500 cursor-default"
-              : "bg-[#0095DA] text-white hover:bg-[#007FBC] hover:shadow-md active:scale-[0.99]"
-            }
-          `}
+          className={`whitespace-nowrap`}
         >
-          {isSelected ? "Selected" : "Select Plan"}
+          <StartButton buttonText={"Select Plan"}></StartButton>
         </button>
       </div>
 
@@ -259,7 +255,7 @@ const PlanCard: React.FC<PlanCardProps> = ({ plan, selectedPlan, onSelectPlan })
         <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-gray-400">
           Key features
         </p>
-        <ul className="flex flex-col gap-2.5">
+        <ul className={`flex flex-col gap-2.5 ${showRemaining ? "max-h-56 overflow-y-scroll" : ""}`}>
           {!showRemaining &&
             visibleFeatures.map((feature) => (
               <li key={feature} className="flex items-start gap-2.5 text-sm leading-5 text-gray-600">
@@ -353,8 +349,9 @@ export default function PricingPage() {
   }, []);
 
   const handlePlanSelect = (plan: Plan) => {
-    setSelectedPlan(plan);
-    setShowPayment(true);
+    window.open("https://insights.saja.biz/signup","_blank")
+    // setSelectedPlan(plan);
+    // setShowPayment(true);
   };
 
   const handleClosePayment = () => {
@@ -432,7 +429,7 @@ export default function PricingPage() {
       </div>
 
       {/* Payment Modal */}
-      {showPayment && selectedPlan && (
+      {/* {showPayment && selectedPlan && (
         <div className="fixed inset-0 h-screen w-screen z-50">
           <PaymentUi
             isOpen={showPayment}
@@ -441,7 +438,7 @@ export default function PricingPage() {
             userEmail="" // You can pass user email from auth context if available
           />
         </div>
-      )}
+      )} */}
     </div>
   );
 }

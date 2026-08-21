@@ -1,8 +1,8 @@
 import { Elements, useStripe, PaymentElement, useElements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import { useEffect, useMemo, useState } from 'react';
-
-const stripePromise = loadStripe("pk_test_51TozhrCjuVlv6C0Yb8FYODaTYD1puywX3K5QrtcmLzfSyoL1PoTqOQbAXu65KIJrvJmwXCB0TUMmxd3bEpH5QZbB008QsXWcdY");
+const stripe_p_key = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || ""
+const stripePromise = loadStripe(stripe_p_key);
 
 // Types
 interface Plan {
