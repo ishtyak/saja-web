@@ -419,7 +419,7 @@ export default function PricingPage() {
             <div className="mt-12 text-center">
               <p className="text-sm text-gray-400">
                 All plans include secure survey infrastructure. Need help choosing?
-                <a href="/contact" className="text-[#0095DA] hover:underline ml-1">
+                <a href="/#contact" className="text-[#0095DA] hover:underline ml-1">
                   Contact our team
                 </a>
               </p>

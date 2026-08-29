@@ -50,7 +50,7 @@ export default function Footer() {
             <div>
               <h4 className="text-[#494949] text-[16px] font-bold mb-4">Support</h4>
               <ul className="flex flex-col gap-3">
-                {[{ label: 'Contact-us', href: '' },].map((item) => (
+                {[{ label: 'Contact-us', href: '/#contact' },].map((item) => (
                   <li key={item.href} onClick={(e) => {
                     if (item.href) return;
                     e.preventDefault();
