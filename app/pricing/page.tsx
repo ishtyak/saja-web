@@ -216,7 +216,7 @@ const PlanCard: React.FC<PlanCardProps> = ({ plan, selectedPlan, onSelectPlan })
             {currencySymbol}{Number(plan?.price || 0).toLocaleString()}
           </span>
           <span className="text-sm text-gray-500">
-            {billingCycle ? `per ${billingCycle}` : ""}
+            {billingCycle ? `per month` : ""} / <span className="text-sm text-gray-500">Billed annually</span>
           </span>
         </div>
       </div>
