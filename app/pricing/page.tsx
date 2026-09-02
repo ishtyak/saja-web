@@ -1,4 +1,3 @@
-// app/pricing/page.tsx
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
@@ -6,8 +5,8 @@ import { IoClose, IoSparklesOutline } from "react-icons/io5";
 import { MdCheck } from "react-icons/md";
 import PaymentUi from "../components/cus_stripe_checkout";
 import StartButton from "../components/StartButton";
+import initializeCurrency from "@/services/currency.service";
 
-// Types
 interface Plan {
   id?: string;
   planId?: string;
@@ -88,12 +87,10 @@ const getPlanFeatures = (plan: Plan): string[] => {
   const config = plan?.config || {};
   const features: string[] = [];
 
-  // SURVEY SCOPE
   if (config.surveyScope?.buildWithAI) features.push("AI Survey Creation");
   if (config.surveyScope?.downloadQuestionnaireDoc) features.push("Upload Questionnaire");
   if (config.surveyScope?.createSurvey) features.push("Custom Survey Builder");
 
-  // DATA COLLECTION
   if (config.dataCollection?.qr) features.push("QR Code Collection");
   if (config.dataCollection?.email) features.push("Email Collection");
   if (config.dataCollection?.weblink) features.push("Live Survey Web Link");
@@ -102,7 +99,6 @@ const getPlanFeatures = (plan: Plan): string[] => {
   if (config.dataCollection?.prWeblink) features.push("Personalized Links");
   if (config.dataCollection?.otr) features.push("One-Time Response Control");
 
-  // LOGIC
   if (config.logicTypes?.skipLogic) features.push("Skip Logic");
   if (config.logicTypes?.delayBranching) features.push("Delay Branching");
   if (config.logicTypes?.questionDisplay) features.push("Question Display Logic");
@@ -110,26 +106,22 @@ const getPlanFeatures = (plan: Plan): string[] => {
   if (config.logicTypes?.carryForward) features.push("Carry Forward Logic");
   if (config.logicTypes?.priorityLogic) features.push("Priority Logic");
 
-  // PIPING
   if (config.piping?.ques) features.push("Question Piping");
   if (config.piping?.eData) features.push("Embedded Data Piping");
   if (config.piping?.loop) features.push("Looping");
 
-  // DESIGN
   if (config.designThemes?.logo) features.push("Custom Logo");
   if (config.designThemes?.theme) features.push("Survey Themes");
   if (config.designThemes?.cusTheme) features.push("Custom Themes");
   if (config.designThemes?.fontTheme) features.push("Custom Fonts");
   if (config.designThemes?.colors) features.push("Custom Colors");
 
-  // SURVEY CONTROLS
   if (config.surveyControlSettings?.addsection) features.push("Survey Sections");
   if (config.surveyControlSettings?.brandom) features.push("Block Randomization");
   if (config.surveyControlSettings?.arandom) features.push("Answer Randomization");
   if (config.surveyControlSettings?.language) features.push("Multi-Language Support");
   if (config.surveyControlSettings?.save_cont_opt) features.push("Save & Continue");
 
-  // ANALYTICS
   if (config.analyticsInsights?.rtrc) features.push("Real-Time Response Collection");
   if (config.analyticsInsights?.rtd) features.push("Real-Time Dashboard");
   if (config.analyticsInsights?.sem_analysis) features.push("AI Sentiment Analysis");
@@ -141,13 +133,11 @@ const getPlanFeatures = (plan: Plan): string[] => {
   if (config.analyticsInsights?.cus_graph) features.push("Custom Graph Themes");
   if (config.analyticsInsights?.mult_grpah_opt) features.push("Multiple Graph Options");
 
-  // COLLABORATION
   if (config.collaborationSharing?.collaboration) features.push("Survey Collaboration");
   if (config.collaborationSharing?.multiUserAcess) features.push("Multi-User Access");
   if (config.collaborationSharing?.role_based_permission) features.push("Role-Based Permissions");
   if (config.collaborationSharing?.audit_logs) features.push("Audit Logs");
 
-  // SECURITY
   if (config.security?.GDPR) features.push("GDPR Support");
 
   return [...new Set(features)];
@@ -159,23 +149,21 @@ const CheckIcon = () => (
   </span>
 );
 
-// PlanCard component
 interface PlanCardProps {
   plan: Plan;
   selectedPlan: Plan | null;
   onSelectPlan: (plan: Plan) => void;
+  currencyDetails: any;
 }
 
-const PlanCard: React.FC<PlanCardProps> = ({ plan, selectedPlan, onSelectPlan }) => {
+const PlanCard: React.FC<PlanCardProps> = ({ plan, selectedPlan, onSelectPlan, currencyDetails }) => {
   const [showRemaining, setShowRemaining] = useState(false);
-
   const isPopular = plan?.planName === POPULAR_PLAN;
   const isSelected = selectedPlan?.planName === plan?.planName;
-
   const features = getPlanFeatures(plan);
   const visibleFeatures = features.slice(0, 8);
   const remainingFeatures = Math.max(features.length - visibleFeatures.length, 0);
-  const currencySymbol = getCurrencySymbol(plan?.currency);
+  const currencySymbol = currencyDetails?.currencySymbol || getCurrencySymbol(plan?.currency);
   const billingCycle = formatBillingCycle(plan?.billingCycle);
 
   const handlePlanSelect = () => {
@@ -194,14 +182,12 @@ const PlanCard: React.FC<PlanCardProps> = ({ plan, selectedPlan, onSelectPlan })
         ${isSelected ? "ring-2 ring-[#0095DA] ring-offset-2" : ""}
       `}
     >
-      {/* Popular Badge */}
       {isPopular && !isSelected && (
         <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#7C3AED] px-4 py-1 text-xs font-semibold text-white shadow-lg">
           Popular
         </div>
       )}
 
-      {/* Plan title */}
       <div className="mb-3">
         <h3 className="text-xl font-bold text-[#1A2A3A]">{plan?.planName}</h3>
         <p className="mt-1 text-sm text-gray-500">
@@ -209,19 +195,21 @@ const PlanCard: React.FC<PlanCardProps> = ({ plan, selectedPlan, onSelectPlan })
         </p>
       </div>
 
-      {/* Price */}
       <div className="mb-4">
-        <div className="flex items-baseline gap-1">
-          <span className="text-3xl font-bold text-[#1A2A3A]">
-            {currencySymbol}{Number(plan?.price || 0).toLocaleString()}
-          </span>
-          <span className="text-sm text-gray-500">
-            {billingCycle ? `per month` : ""} / <span className="text-sm text-gray-500">Billed annually</span>
-          </span>
-        </div>
+         <div className="flex items-baseline gap-1">
+                    <span className="text-[32px] font-bold tracking-tight text-[#1A2A3A]">
+                        {currencySymbol}
+                        {Number(plan?.price * currencyDetails?.exchangeRate || plan?.price || 0).toFixed(2)}
+                    </span>
+                    <span className="text-sm text-gray-500">
+                        {billingCycle ? `per month` : ""}
+                    </span>
+                </div>
+                <div>
+                    <p className="text-sm text-sky-500">Billed annually for {currencySymbol}{12 * (plan?.price * currencyDetails?.exchangeRate as any|| plan?.price).toFixed(2)}</p>
+                </div>
       </div>
 
-      {/* Plan details */}
       <div className="mb-4 space-y-2 border-t border-gray-100 pt-4">
         <div className="flex justify-between text-sm">
           <span className="text-gray-500">Responses per year</span>
@@ -239,7 +227,6 @@ const PlanCard: React.FC<PlanCardProps> = ({ plan, selectedPlan, onSelectPlan })
         </div>
       </div>
 
-      {/* CTA Button */}
       <div className="mb-5 flex justify-center">
         <button
           type="button"
@@ -250,7 +237,6 @@ const PlanCard: React.FC<PlanCardProps> = ({ plan, selectedPlan, onSelectPlan })
         </button>
       </div>
 
-      {/* Features */}
       <div className="border-t border-gray-100 pt-4 mt-auto">
         <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-gray-400">
           Key features
@@ -284,14 +270,14 @@ const PlanCard: React.FC<PlanCardProps> = ({ plan, selectedPlan, onSelectPlan })
   );
 };
 
-// PlanCards component
 interface PlanCardsProps {
   plans: Plan[];
   selectedPlan: Plan | null;
   onSelectPlan: (plan: Plan) => void;
+  currencyDetails: any;
 }
 
-const PlanCards: React.FC<PlanCardsProps> = ({ plans, selectedPlan, onSelectPlan }) => {
+const PlanCards: React.FC<PlanCardsProps> = ({ plans, selectedPlan, onSelectPlan, currencyDetails }) => {
   const sortedPlans = useMemo(() => {
     return [...plans].sort(
       (a, b) => (PLAN_ORDER[a?.planName] || 99) - (PLAN_ORDER[b?.planName] || 99)
@@ -306,6 +292,7 @@ const PlanCards: React.FC<PlanCardsProps> = ({ plans, selectedPlan, onSelectPlan
             plan={plan}
             selectedPlan={selectedPlan}
             onSelectPlan={onSelectPlan}
+            currencyDetails={currencyDetails}
           />
         </div>
       ))}
@@ -313,19 +300,20 @@ const PlanCards: React.FC<PlanCardsProps> = ({ plans, selectedPlan, onSelectPlan
   );
 };
 
-// Main Pricing Page Component
 export default function PricingPage() {
   const [plans, setPlans] = useState<Plan[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [selectedPlan, setSelectedPlan] = useState<Plan | null>(null);
   const [showPayment, setShowPayment] = useState(false);
+  const [currencyDetails, setCurrencyDetails] = useState(null)
 
   const getAllPlans = async () => {
     try {
       setLoading(true);
       setError("");
-
+      const cnvCurrency = await initializeCurrency();
+      setCurrencyDetails(cnvCurrency)
       const res = await fetch("https://api.saja.biz/saja/api/survey-plans/get-all", {
         method: "GET",
         headers: {
@@ -349,7 +337,7 @@ export default function PricingPage() {
   }, []);
 
   const handlePlanSelect = (plan: Plan) => {
-    window.open("https://insights.saja.biz/signup","_blank")
+    window.open("https://insights.saja.biz/signup", "_blank")
     // setSelectedPlan(plan);
     // setShowPayment(true);
   };
@@ -414,6 +402,7 @@ export default function PricingPage() {
               plans={plans}
               selectedPlan={selectedPlan}
               onSelectPlan={handlePlanSelect}
+              currencyDetails={currencyDetails}
             />
 
             <div className="mt-12 text-center">

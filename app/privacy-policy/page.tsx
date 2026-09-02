@@ -395,7 +395,7 @@ export default function PrivacyPolicyPage() {
               <h3 className="text-2xl font-bold mb-4">Contact Us</h3>
 
               <div className="space-y-3 text-gray-200">
-                <p>Email: hello@saja.biz</p>
+                <p>Email: privacy@saja.biz</p>
                 <p>Address: Saja, Douglas, Isle of Man</p>
                 <p className="text-sm text-gray-300 mt-2">
                   Company Registration Number: 137004C
