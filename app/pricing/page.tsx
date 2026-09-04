@@ -117,8 +117,8 @@ const getPlanFeatures = (plan: Plan): string[] => {
   if (config.designThemes?.colors) features.push("Custom Colors");
 
   if (config.surveyControlSettings?.addsection) features.push("Survey Sections");
-  if (config.surveyControlSettings?.brandom) features.push("Block Randomization");
-  if (config.surveyControlSettings?.arandom) features.push("Answer Randomization");
+  if (config.surveyControlSettings?.brandom) features.push("Basic Randomization");
+  if (config.surveyControlSettings?.arandom) features.push("Advance Randomization");
   if (config.surveyControlSettings?.language) features.push("Multi-Language Support");
   if (config.surveyControlSettings?.save_cont_opt) features.push("Save & Continue");
 
