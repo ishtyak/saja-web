@@ -169,7 +169,7 @@ const PlanCard: React.FC<PlanCardProps> = ({ plan, selectedPlan, onSelectPlan, c
   const handlePlanSelect = () => {
     onSelectPlan(plan);
   };
-
+  console.log("plan", plan)
   return (
     <div
       className={`
@@ -196,18 +196,32 @@ const PlanCard: React.FC<PlanCardProps> = ({ plan, selectedPlan, onSelectPlan, c
       </div>
 
       <div className="mb-4">
-         <div className="flex items-baseline gap-1">
-                    <span className="text-[32px] relative tracking-tight text-[#1A2A3A]">
-                        <span className="text-sm absolute top-2 ">{currencySymbol}</span>
-                        <span className="ml-3">{Number(plan?.price * currencyDetails?.exchangeRate || plan?.price || 0).toFixed(2)}</span>
-                    </span>
-                    <span className="text-sm text-gray-500">
-                        {billingCycle ? `per month` : ""}
-                    </span>
-                </div>
-                <div>
-                    <p className="text-sm text-sky-500">Billed annually for {currencySymbol}{12 * (plan?.price * currencyDetails?.exchangeRate as any|| plan?.price).toFixed(2)}</p>
-                </div>
+        <div className="flex items-baseline gap-1">
+          {
+            plan?.price !== 0 ?
+              <>
+                <span className="text-[32px] relative tracking-tight text-[#1A2A3A]">
+                  <span className="text-lg absolute top-1">{currencySymbol}</span>
+                  <span className="ml-4">{Number(plan?.price * currencyDetails?.exchangeRate || plan?.price || 0).toFixed(2)}</span>
+                </span>
+                <span className="text-sm text-gray-500">
+                  {billingCycle ? `per month` : ""}
+                </span>
+              </> :
+              <>
+                <span className="text-[32px] relative tracking-tight text-[#1A2A3A]">
+                  <span className={`${plan?.price !== 0 ? "ml-4" : ""}`}>Free</span>
+                </span>
+              </>
+          }
+        </div>
+        <div>
+          {
+            plan?.price !== 0 ?
+              <p className="text-sm text-sky-500">Billed annually for {currencySymbol}{12 * (plan?.price * currencyDetails?.exchangeRate as any || plan?.price).toFixed(2)}</p>
+              : <p className="text-sm text-sky-500">Upgrade Anytime</p>
+          }
+        </div>
       </div>
 
       <div className="mb-4 space-y-2 border-t border-gray-100 pt-4">
