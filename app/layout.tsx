@@ -15,8 +15,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://saja.biz"),
   title: "Saja - Feedback Insights | Ascend with Insights",
   description: "From Surveys to Analytics – everything made smarter with AI. Design, Collect, Analyse. All in one platform.",
+  openGraph: {
+    title: "Saja - Feedback Insights | Ascend with Insights",
+    description:
+      "From Surveys to Analytics – everything made smarter with AI. Design, Collect, Analyse. All in one platform.",
+    url: "https://saja.biz",
+    siteName: "Saja",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Saja - Feedback Insights",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
