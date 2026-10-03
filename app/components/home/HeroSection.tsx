@@ -24,7 +24,7 @@ export default function HeroSection() {
             </Link>
           </div>
         </div>
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <div className="flex gap-3  border-2 border-[#A9E4FF] p-3 rounded-lg">
             <div className="flex items-center">
               <Image src={'/figma-refs/krossiq.png'} alt="krossIq" height={20} width={100}></Image>
@@ -34,7 +34,7 @@ export default function HeroSection() {
               <Link target="_blank" className="text-sky-500 flex " href={'https://krossiq.com'}>Try KrossIQ Now <ArrowRight /></Link>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
