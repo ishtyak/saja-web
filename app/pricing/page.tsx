@@ -190,7 +190,7 @@ const PlanCard: React.FC<PlanCardProps> = ({ plan, selectedPlan, onSelectPlan, c
 
       <div className="mb-3">
         <h3 className="text-xl font-bold text-[#1A2A3A]">{plan?.planName}</h3>
-        <p className="mt-1 text-sm text-gray-500">
+        <p className="mt-1 text-sm h-[36px] text-gray-500">
           {plan?.planDescription || getPlanDescription(plan?.planName)}
         </p>
       </div>
